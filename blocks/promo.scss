@@ -1,0 +1,95 @@
+.promo {
+    min-width: 1100px;
+    min-height: 650px;
+    background-image: url('../image/promo-image.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-flow: wrap;
+}
+
+.header {
+    min-height: 90px;
+}
+
+.header__logo {
+    width: 92px;
+    height: 69px;
+    margin-top: 12px;
+    margin-left: 76px;
+}
+.header__menu-item-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "ubuntulight", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.header__menu-item {
+    display: flex;
+    margin-right: 17px;
+}
+.header__menu-list {
+    align-items: center;
+}
+.header__menu {
+    width: 89%;
+    margin-top: 12px;
+    margin-left: 30px;
+}
+.header__menu-item-dat {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 13px;
+    margin-top: 5px;
+    margin-right: 2px;
+}
+.header__menu-item-button {
+    width: 97px;
+    height: 35px;
+    background-color: #e45028;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "gagalinregular", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.promo__drops {
+    display: flex;
+    background-image: url('../image/promo-drops.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 451px;
+    height: 241px;
+    margin-left: 96px;
+    margin-top: 144px;
+    position: absolute;
+    left: 0;
+}
+.promo__image {
+    display: flex;
+    width: 417px;
+    height: 424px;
+    position: absolute;
+    left: 0;
+    margin-top: 76px;
+    margin-left: 130px;
+}
+.promo__info-text {
+    margin: 0px;
+    width: 406px;
+    color: #ffffff;
+    font-family: "lifehackmedium";
+    font-size: 65px;
+    font-weight: 500;
+    margin-top: -151px;
+    margin-left: 502px;
+}

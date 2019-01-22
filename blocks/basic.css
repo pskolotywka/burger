@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.wrapper {
+  width: 100%; }
+
+.container {
+  margin: 0 auto; }
+
+ul {
+  list-style-type: none; }
