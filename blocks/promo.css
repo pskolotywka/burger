@@ -8,7 +8,8 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: wrap;
-  flex-flow: wrap; }
+  flex-flow: wrap;
+  position: relative; }
 
 .header {
   min-height: 90px; }
@@ -17,7 +18,7 @@
   width: 92px;
   height: 69px;
   margin-top: 12px;
-  margin-left: 76px; }
+  margin-left: -1px; }
 
 .header__menu-item-link {
   text-decoration: none;
@@ -85,7 +86,8 @@
   margin-left: 96px;
   margin-top: 144px;
   position: absolute;
-  left: 0; }
+  left: 0;
+  top: 0; }
 
 .promo__image {
   display: -webkit-box;
@@ -95,6 +97,7 @@
   height: 424px;
   position: absolute;
   left: 0;
+  top: 0;
   margin-top: 76px;
   margin-left: 130px; }
 
@@ -102,8 +105,8 @@
   margin: 0px;
   width: 406px;
   color: #ffffff;
-  font-family: "lifehackmedium";
+  font-family: "gagalinregular";
   font-size: 65px;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: -151px;
   margin-left: 502px; }
