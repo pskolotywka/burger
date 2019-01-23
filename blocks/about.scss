@@ -1,0 +1,70 @@
+.about {
+    min-width: 1100px;
+    height: 650px;
+    background-image: url('image/bg-about.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+            .about__title {
+            color: #2f3234;
+            font-family: "Gagalin";
+            font-size: 72px;
+            font-weight: 400;
+            margin-top: 113px;
+            margin-left: 358px;
+            }
+                .about__list {
+                    display: flex;
+                    margin-left: 87px;
+                    margin-top: 14px;
+                }
+
+}
+.about__item {
+    width: 285px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        .about__item-title {
+            color: #2f3234;
+            font-family: "Lifehack";
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.6px;
+            text-align: center;
+        }   
+        .about__item-description {
+            width: 281px;
+            opacity: 0.8;
+            color: #2f3234;
+            font-family: "Ubuntu";
+            font-size: 14px;
+            font-weight: 300;
+            text-align: center;
+        }   
+}
+.about__item:nth-child(2) {
+    margin-left: 38px;
+    margin-right: 33px;
+}
+.about__item:first-child .about__item-icon {
+    background-image: url('image/meat.png');
+    width: 97px;
+    height: 89px;
+}
+.about__item:nth-child(2) .about__item-icon {
+    background-image: url('image/hand.png');
+    width: 73px;
+    height: 85px;
+    margin-top: 9px;
+    margin-left: -7px;
+}
+.about__item:last-child .about__item-icon {
+    background-image: url('image/natural.png');
+    width: 88px;
+    height: 75px;
+    margin-top: 30px;
+    margin-left: -2px;
+}
