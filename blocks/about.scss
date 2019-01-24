@@ -15,18 +15,15 @@
             }
                 .about__list {
                     display: flex;
-                    margin-left: 87px;
-                    margin-top: 14px;
+                    margin-left: 82px;
+                    margin-top: 33px;
                 }
 
 }
 .about__item {
     width: 285px;
-    height: 235px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
         .about__item-title {
             color: #2f3234;
             font-family: "Lifehack";
@@ -34,37 +31,51 @@
             font-weight: 500;
             letter-spacing: -0.6px;
             text-align: center;
+            margin-top: 25px;
+            margin-left: 3px;
+            line-height: 33px;
         }   
         .about__item-description {
-            width: 281px;
+            width: 287px;
             opacity: 0.8;
             color: #2f3234;
             font-family: "Ubuntu";
             font-size: 14px;
             font-weight: 300;
             text-align: center;
+            margin-top: 15px;
+            margin-left: 4px;
+            line-height: 24px;
         }   
 }
+.about__item:last-child .about__item-description {
+    margin-top: -1px;
+    margin-left: 3px;
+}
 .about__item:nth-child(2) {
-    margin-left: 38px;
-    margin-right: 33px;
+    margin-left: 35px;
+    margin-right: 36px;
 }
 .about__item:first-child .about__item-icon {
     background-image: url('image/meat.png');
     width: 97px;
     height: 89px;
+    margin-left: 99px;
+    margin-top: 11px;
 }
 .about__item:nth-child(2) .about__item-icon {
     background-image: url('image/hand.png');
     width: 73px;
     height: 85px;
-    margin-top: 9px;
-    margin-left: -7px;
+    margin-top: 11px;
+    margin-left: 110px;
+    margin-bottom: 3px;
 }
 .about__item:last-child .about__item-icon {
     background-image: url('image/natural.png');
     width: 88px;
     height: 75px;
-    margin-top: 30px;
-    margin-left: -2px;
+    margin-top: 14px;
+    margin-left: 103px;
+    margin-bottom: 14px;
 }

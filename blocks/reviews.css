@@ -1,0 +1,13 @@
+.team {
+  width: 1100px;
+  height: 650px; }
+  .team .reviews__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap; }
+
+.reviews__item {
+  width: 275px;
+  height: 325px; }

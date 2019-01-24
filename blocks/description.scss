@@ -1,0 +1,133 @@
+.description__scroll-prev {
+    width: 17px;
+    height: 27px;
+    background-image: url('image/scroll-left.png');
+    background-repeat: no-repeat;
+    margin-top: 311px;
+    margin-left: 47px;
+}
+.description {
+    display: flex;
+    height: 650px;
+    height: 650px;
+    background-color: #f9b43b;
+    background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
+    .description__composition {
+        width: 460px;
+        height: 530px;
+        margin-top: 77px;
+        margin-left: -17px; 
+        .description__composition-icon {
+            width: 90px;
+            height: 90px;
+            background-color: rgba(227,80,40,0.4);
+            border-radius: 5px;
+            background-image: url('image/burger.png');
+            background-repeat: no-repeat;
+            background-position: 22px 15px;
+            display: flex;
+            margin-top: 13px;
+            margin-left: 33px;
+            .description__composition-text {
+                color: #ffffff;
+                font-family: "Gagalin";
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 62px;
+                margin-left: 23px;
+            }
+        }
+        .description__composition-image {
+            margin-top: -13px;
+            margin-left: 0px;
+        }
+    }
+    .description__info {
+        width: 480px;
+        height: 400px;
+        margin-top: 135px;
+        margin-left: 54px;
+        .description__info-title {
+            color: #ffffff;
+            font-family: "Gagalin";
+            font-size: 72px;
+            font-weight: 400;
+            line-height: 65px;
+        }
+        .description__info-text {
+            width: 443px;
+            color: #ffffff;
+            font-family: "Ubuntu";
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+            margin-top: 45px;
+        }
+        .description__info-buy {
+            display: flex;
+            color: #e35028;
+            font-family: "Gagalin";
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 28px;
+            letter-spacing: -0.7px;
+            margin-top: 39px;
+            .description__info-buy-price {
+                font-size: 72px;
+                letter-spacing: -1.8px;
+            }
+            .description__info-buy-valute {
+                margin-left: 6px;
+                margin-top: 18px;
+            }
+            .description__info-buy-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 97px;
+                height: 35px;
+                background-color: #e45028;
+                border-radius: 5px;
+                width: 66px;
+                color: #ffffff;
+                font-family: "Ubuntu";
+                font-size: 13px;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.1px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-top: 18px;
+                margin-left: 30px;
+            }
+        }
+        
+    }
+}
+.description__composition-calories {
+    width: 60px;
+    height: 60px;
+    background: url('image/calories.png') no-repeat;
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: "Gagalin";
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 27px;
+    padding-left: 13px;
+    margin-top: -15px;
+    margin-left: 33px;
+    .description__composition-calories-number {
+        margin-top: 10px;
+        margin-left: 2px;
+        font-size: 14px;
+    }
+}
+.description__scroll-next {
+    width: 17px;
+    height: 27px;
+    background-image: url('image/scroll-right.png');
+    background-repeat: no-repeat;
+    margin-top: 311px;
+    margin-left: -2px;
+}
