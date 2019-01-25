@@ -1,7 +1,5 @@
 .promo {
-    min-width: 1100px;
-    min-height: 650px;
-    background: url('image/promo-image.png');
+    background: url('image/texture.png'), url('image/promo-image.png');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -9,30 +7,17 @@
     flex-flow: wrap;
     
 }
-.pr2omo:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: url('image/texture.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
 .header {
+    display: flex;
     height: 90px;
-    .header__logo {
+    .logo {
         width: 92px;
         height: 69px;
         margin-top: 12px;
         margin-left: 78px;
     }
 }
-
-
-.header__menu-item-link {
+.menu__item-link {
     text-decoration: none;
     color: #ffffff;
     font-family: "Ubuntu", sans-serif;
@@ -40,28 +25,30 @@
     font-weight: 500;
     text-transform: uppercase;
 }
-.header__menu {
+.menu {
     width: 89%;
     margin-top: 11px;
     margin-left: 31px;
-    .header__menu-list {
+    .menu__list {
+        display: flex;
         align-items: center;
         margin-top: 16px;
         margin-left: 37px;
-        .header__menu-item {
+        .menu__item {
             display: flex;
             margin-right: 14px;
-            .header__menu-item-dat {
-                width: 4px;
-                height: 4px;
-                border-radius: 50%;
-                background-color: white;
-                margin-top: 5px;
-                margin-right: 3px;
-                margin-left: 14px;
-            }
         }
-        .header__menu-item-button {
+        .menu__item:after {
+            content: "";
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: white;
+            margin-top: 5px;
+            margin-right: 3px;
+            margin-left: 14px;
+        }
+        .menu__item-button {
             width: 97px;
             height: 35px;
             background-color: #e45028;
@@ -79,56 +66,58 @@
     }
 }
 .promo__block {
+    display: flex;
     width: 73%;
     height: 70%;
     margin-left: 92px;
-    margin-top: 6px;
+    margin-top: -130px;
     position: relative;
-        .promo__image {
-            width: 417px;
-            height: 424px;
-            margin-top: -20px;
-            margin-left: 38px;
-        }
-        .promo__drops {
-            background-image: url('image/promo-drops.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 451px;
-            height: 241px;
-            left: 0;
-            top: 0;
-            margin-left: 4px;
-            margin-top: 48px;
-            position: absolute;
-        }
-        .promo__info-text {
-            margin: 0px;
-            width: 406px;
-            color: #f9b43b;
-            font-family: "Gagalin";
-            font-size: 70px;
-            font-weight: 400;
-            margin-top: 113px;
-            margin-left: 12px;
-            letter-spacing: 1.2px;
-        }
-        .promo__info-description {
-            width: 406px;
-            color: #ffffff;
-            font-family: "Lifehack";
-            font-size: 65px;
-            font-weight: 500;
-            letter-spacing: -1.63px;
-            line-height: 60px;
-            margin-top: 22px;
-            margin-left: 13px;
-        }
+    .promo__image {
+        width: 417px;
+        height: 424px;
+        margin-top: -20px;
+        margin-left: 38px;
+    }
+    .promo__drops {
+        background-image: url('image/promo-drops.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 451px;
+        height: 241px;
+        left: 0;
+        top: 0;
+        margin-left: 4px;
+        margin-top: 48px;
+        position: absolute;
+    }
+    .promo__info-text {
+        margin: 0px;
+        width: 406px;
+        color: #f9b43b;
+        font-family: "Gagalin";
+        font-size: 70px;
+        font-weight: 400;
+        margin-top: 113px;
+        margin-left: 12px;
+        letter-spacing: 1.2px;
+    }
+    .promo__info-description {
+        width: 406px;
+        color: #ffffff;
+        font-family: "Lifehack";
+        font-size: 65px;
+        font-weight: 500;
+        letter-spacing: -1.63px;
+        line-height: 60px;
+        margin-top: 22px;
+        margin-left: 13px;
+    }
 }
 .pagination {
+    display: fixed;
     width: 30px;
     height: 200px;
-    margin-bottom: 360px;
+    margin-top: -135px;
     margin-left: 141px;
     .pagination__item {
         margin-bottom: 15px;
@@ -154,7 +143,7 @@
     margin-bottom: 11px;
     margin-left: -1px;
 }
-.pr2omo__scroll {
+.promo__scroll {
     width: 29px;
     height: 14px;
     background: url('image/arrow-scroll.png');

@@ -1,36 +1,36 @@
 @font-face {
   font-family: 'gagalinregular';
-  src: url("gagalin-regular-webfont.woff2") format("woff2"), url("gagalin-regular-webfont.woff") format("woff");
+  src: url("fonts/gagalin-regular-webfont.woff2") format("woff2"), url("fonts/gagalin-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'lifehackmedium';
-  src: url("lifehack_medium-webfont.woff2") format("woff2"), url("lifehack_medium-webfont.woff") format("woff");
+  src: url("fonts/lifehack_medium-webfont.woff2") format("woff2"), url("fonts/lifehack_medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntubold';
-  src: url("ubuntu-b-webfont.woff2") format("woff2"), url("ubuntu-b-webfont.woff") format("woff");
+  src: url("fonts/ubuntu-b-webfont.woff2") format("woff2"), url("fonts/ubuntu-b-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntulight';
-  src: url("ubuntu-light-webfont.woff2") format("woff2"), url("ubuntu-light-webfont.woff") format("woff");
+  src: url("fonts/ubuntu-light-webfont.woff2") format("woff2"), url("fonts/ubuntu-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubuntumedium';
-  src: url("ubuntu-medium-webfont.woff2") format("woff2"), url("ubuntu-medium-webfont.woff") format("woff");
+  src: url("fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("fonts/ubuntu-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'ubunturegular';
-  src: url("ubuntu-regular-webfont.woff2") format("woff2"), url("ubuntu-regular-webfont.woff") format("woff");
+  src: url("fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("fonts/ubuntu-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal; }
 
@@ -38,7 +38,7 @@ body {
   margin: 0px;
   padding: 0px; }
 
-.flex {
+.flexbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -51,6 +51,11 @@ body {
   width: 1100px;
   margin: 0 auto; }
 
+.container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 ul {
   list-style-type: none;
   margin: 0px;
@@ -62,10 +67,13 @@ a {
 h1, h2, h3, h4, h5, h6 {
   margin: 0px; }
 
+.sector {
+  width: 100%;
+  height: 100vh;
+  min-height: 650px; }
+
 .promo {
-  min-width: 1100px;
-  min-height: 650px;
-  background: url("image/promo-image.png");
+  background: url("image/texture.png"), url("image/promo-image.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -75,26 +83,18 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-flow: wrap;
   flex-flow: wrap; }
 
-.pr2omo:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: url("image/texture.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: 0;
-  top: 0; }
-
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 90px; }
-  .header .header__logo {
+  .header .logo {
     width: 92px;
     height: 69px;
     margin-top: 12px;
     margin-left: 78px; }
 
-.header__menu-item-link {
+.menu__item-link {
   text-decoration: none;
   color: #ffffff;
   font-family: "Ubuntu", sans-serif;
@@ -102,30 +102,34 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   text-transform: uppercase; }
 
-.header__menu {
+.menu {
   width: 89%;
   margin-top: 11px;
   margin-left: 31px; }
-  .header__menu .header__menu-list {
+  .menu .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     margin-top: 16px;
     margin-left: 37px; }
-    .header__menu .header__menu-list .header__menu-item {
+    .menu .menu__list .menu__item {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       margin-right: 14px; }
-      .header__menu .header__menu-list .header__menu-item .header__menu-item-dat {
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: white;
-        margin-top: 5px;
-        margin-right: 3px;
-        margin-left: 14px; }
-    .header__menu .header__menu-list .header__menu-item-button {
+    .menu .menu__list .menu__item:after {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: white;
+      margin-top: 5px;
+      margin-right: 3px;
+      margin-left: 14px; }
+    .menu .menu__list .menu__item-button {
       width: 97px;
       height: 35px;
       background-color: #e45028;
@@ -147,10 +151,13 @@ h1, h2, h3, h4, h5, h6 {
       text-transform: uppercase; }
 
 .promo__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 73%;
   height: 70%;
   margin-left: 92px;
-  margin-top: 6px;
+  margin-top: -130px;
   position: relative; }
   .promo__block .promo__image {
     width: 417px;
@@ -190,9 +197,10 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 13px; }
 
 .pagination {
+  display: fixed;
   width: 30px;
   height: 200px;
-  margin-bottom: 360px;
+  margin-top: -135px;
   margin-left: 141px; }
   .pagination .pagination__item {
     margin-bottom: 15px; }
@@ -216,15 +224,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 11px;
   margin-left: -1px; }
 
-.pr2omo__scroll {
+.promo__scroll {
   width: 29px;
   height: 14px;
   background: url("image/arrow-scroll.png");
   display: block; }
 
 .about {
-  min-width: 1100px;
-  height: 650px;
   background-image: url("image/bg-about.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -313,14 +319,14 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("image/scroll-left.png");
   background-repeat: no-repeat;
   margin-top: 311px;
-  margin-left: 47px; }
+  margin-left: 47px;
+  position: relative;
+  z-index: 20; }
 
 .description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 650px;
-  height: 650px;
   background-color: #f9b43b;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(48%, #eb8c38), color-stop(74%, #f9b43b), to(#f9b43b));
   background-image: -webkit-linear-gradient(bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
@@ -331,26 +337,29 @@ h1, h2, h3, h4, h5, h6 {
     height: 530px;
     margin-top: 77px;
     margin-left: -17px; }
-    .description .description__composition .description__composition-icon {
+    .description .description__composition .description__composition-button {
+      border: none;
       width: 90px;
       height: 90px;
+      background-color: transparent;
       background-color: rgba(227, 80, 40, 0.4);
       border-radius: 5px;
       background-image: url("image/burger.png");
       background-repeat: no-repeat;
       background-position: 22px 15px;
+      opacity: 0.7;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       margin-top: 13px;
       margin-left: 33px; }
-      .description .description__composition .description__composition-icon .description__composition-text {
+      .description .description__composition .description__composition-button .description__composition-text {
         color: #ffffff;
         font-family: "Gagalin";
         font-size: 14px;
         font-weight: 400;
-        margin-top: 62px;
-        margin-left: 23px; }
+        margin-top: 54px;
+        margin-left: 17px; }
     .description .description__composition .description__composition-image {
       margin-top: -13px;
       margin-left: 0px; }
@@ -440,31 +449,31 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("image/scroll-right.png");
   background-repeat: no-repeat;
   margin-top: 311px;
-  margin-left: -2px; }
+  margin-left: -2px;
+  position: relative;
+  z-index: 20; }
 
-.reviews {
-  width: 1100px;
-  height: 650px; }
-  .reviews .reviews__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-flow: wrap;
-    flex-flow: wrap; }
-    .reviews .reviews__list .reviews__item {
-      position: relative;
-      width: 275px;
-      height: 325px; }
-      .reviews .reviews__list .reviews__item .reviews__image {
-        width: 100%;
-        height: 100%;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%); }
+.reviews .reviews__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+  flex-flow: wrap; }
+  .reviews .reviews__list .reviews__item {
+    position: relative;
+    width: 25%;
+    min-height: 325px; }
+    .reviews .reviews__list .reviews__item .reviews__image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
 
 .reviews__item-effect {
   position: absolute;
-  width: 275px;
-  height: 325px;
+  width: 100%;
+  height: 100%;
   background-color: black;
   opacity: 0;
   top: 0;
