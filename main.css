@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu__item-link {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "ubuntumedium", sans-serif;
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase; }
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
       align-items: center;
       text-decoration: none;
       color: #ffffff;
-      font-family: "Ubuntu", sans-serif;
+      font-family: "ubuntumedium", sans-serif;
       font-size: 13px;
       font-weight: 500;
       text-transform: uppercase; }
@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     width: 406px;
     color: #f9b43b;
-    font-family: "Gagalin";
+    font-family: "gagalinregular";
     font-size: 70px;
     font-weight: 400;
     margin-top: 113px;
@@ -190,7 +190,7 @@ h1, h2, h3, h4, h5, h6 {
   .promo__block .promo__info-description {
     width: 406px;
     color: #ffffff;
-    font-family: "Lifehack";
+    font-family: "lifehackmedium";
     font-size: 65px;
     font-weight: 500;
     letter-spacing: -1.63px;
@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex; }
   .about .about__title {
     color: #2f3234;
-    font-family: "Gagalin";
+    font-family: "gagalinregular";
     font-size: 72px;
     font-weight: 400;
     margin-top: 113px;
@@ -269,7 +269,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column; }
   .about__item .about__item-title {
     color: #2f3234;
-    font-family: "Lifehack";
+    font-family: "lifehackmedium";
     font-size: 24px;
     font-weight: 500;
     letter-spacing: -0.6px;
@@ -281,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 287px;
     opacity: 0.8;
     color: #2f3234;
-    font-family: "Ubuntu";
+    font-family: "ubuntulight";
     font-size: 14px;
     font-weight: 300;
     text-align: center;
@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
       cursor: pointer; }
       .description .description__composition .description__composition-button .description__composition-text {
         color: #ffffff;
-        font-family: "Gagalin";
+        font-family: "gagalinregular";
         font-size: 14px;
         font-weight: 400;
         margin-top: 54px;
@@ -378,14 +378,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 54px; }
     .description .description__info .description__info-title {
       color: #ffffff;
-      font-family: "Gagalin";
+      font-family: "gagalinregular";
       font-size: 72px;
       font-weight: 400;
       line-height: 65px; }
     .description .description__info .description__info-text {
       width: 443px;
       color: #ffffff;
-      font-family: "Ubuntu";
+      font-family: "ubuntulight";
       font-size: 14px;
       font-weight: 300;
       line-height: 24px;
@@ -395,7 +395,7 @@ h1, h2, h3, h4, h5, h6 {
       display: -ms-flexbox;
       display: flex;
       color: #e35028;
-      font-family: "Gagalin";
+      font-family: "ubunturegular";
       font-size: 30px;
       font-weight: 400;
       line-height: 28px;
@@ -403,10 +403,12 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 39px; }
       .description .description__info .description__info-buy .description__info-buy-price {
         font-size: 72px;
-        letter-spacing: -1.8px; }
+        letter-spacing: -1.8px;
+        font-family: "gagalinregular"; }
       .description .description__info .description__info-buy .description__info-buy-valute {
         margin-left: 6px;
-        margin-top: 18px; }
+        margin-top: 18px;
+        font-family: "gagalinregular"; }
       .description .description__info .description__info-buy .description__info-buy-button {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -423,7 +425,7 @@ h1, h2, h3, h4, h5, h6 {
         border-radius: 5px;
         width: 66px;
         color: #ffffff;
-        font-family: "Ubuntu";
+        font-family: "ubuntumedium";
         font-size: 13px;
         font-weight: 500;
         text-transform: uppercase;
@@ -439,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
   background: url("image/calories.png") no-repeat;
   opacity: 0.5;
   color: #ffffff;
-  font-family: "Gagalin";
+  font-family: "gagalinregular";
   font-size: 20px;
   font-weight: 400;
   padding-top: 27px;
@@ -503,7 +505,7 @@ h1, h2, h3, h4, h5, h6 {
   transition-duration: 0.6s; }
   .reviews__description-title {
     color: #ffffff;
-    font-family: "Gagalin";
+    font-family: "gagalinregular";
     font-size: 14px;
     font-weight: 400;
     margin-top: 45px;
@@ -512,7 +514,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 226px;
     height: 133px;
     color: #ffffff;
-    font-family: "Ubuntu";
+    font-family: "ubuntulight";
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
@@ -534,7 +536,7 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-align: center;
     align-items: center;
     color: #ffffff;
-    font-family: "Ubuntu";
+    font-family: "ubuntumedium";
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
