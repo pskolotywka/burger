@@ -120,16 +120,18 @@ h1, h2, h3, h4, h5, h6 {
       display: -ms-flexbox;
       display: flex;
       margin-right: 14px; }
-    .menu .menu__list .menu__item:after {
-      content: "";
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: white;
-      margin-top: 5px;
-      margin-right: 3px;
-      margin-left: 14px; }
-    .menu .menu__list .menu__item-button {
+      .menu .menu__list .menu__item:after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: white;
+        margin-top: 5px;
+        margin-right: 3px;
+        margin-left: 14px; }
+    .menu .menu__list .menu__item:nth-child(7):after {
+      display: none; }
+    .menu .menu__list .menu__item-button .menu__item-button-link {
       width: 97px;
       height: 35px;
       background-color: #e45028;
@@ -197,11 +199,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 13px; }
 
 .pagination {
-  display: fixed;
-  width: 30px;
-  height: 200px;
-  margin-top: -135px;
-  margin-left: 141px; }
+  position: fixed;
+  top: 91px;
+  right: 48px;
+  width: 16px;
+  height: 200px; }
   .pagination .pagination__item {
     margin-bottom: 15px; }
     .pagination .pagination__item .pagination__item-style {
@@ -228,7 +230,12 @@ h1, h2, h3, h4, h5, h6 {
   width: 29px;
   height: 14px;
   background: url("image/arrow-scroll.png");
-  display: block; }
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-left: 48.5%;
+  margin-bottom: 45px; }
 
 .about {
   background-image: url("image/bg-about.png");
@@ -352,7 +359,8 @@ h1, h2, h3, h4, h5, h6 {
       display: -ms-flexbox;
       display: flex;
       margin-top: 13px;
-      margin-left: 33px; }
+      margin-left: 33px;
+      cursor: pointer; }
       .description .description__composition .description__composition-button .description__composition-text {
         color: #ffffff;
         font-family: "Gagalin";
