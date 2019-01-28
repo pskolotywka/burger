@@ -45,7 +45,8 @@ body {
 
 .wrapper {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  min-width: 1100px; }
 
 .container {
   width: 1100px;
@@ -73,8 +74,12 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 650px; }
 
 .promo {
-  background: url("image/texture.png"), url("image/promo-image.png");
+  background: -webkit-gradient(linear, right bottom, left top, from(black), to(rgba(0, 0, 0, 0.6))), url("image/texture.png"), url("image/promo-image.png");
+  background: -webkit-linear-gradient(bottom right, black, rgba(0, 0, 0, 0.6)), url("image/texture.png"), url("image/promo-image.png");
+  background: -o-linear-gradient(bottom right, black, rgba(0, 0, 0, 0.6)), url("image/texture.png"), url("image/promo-image.png");
+  background: linear-gradient(bottom right, black, rgba(0, 0, 0, 0.6)), url("image/texture.png"), url("image/promo-image.png");
   background-repeat: no-repeat;
+  background-position: center, center, center;
   background-size: cover;
   position: relative;
   display: -webkit-box;
@@ -100,7 +105,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "ubuntumedium", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s; }
+  .menu__item-link:hover {
+    text-decoration: underline; }
 
 .menu {
   width: 89%;
@@ -150,7 +160,14 @@ h1, h2, h3, h4, h5, h6 {
       font-family: "ubuntumedium", sans-serif;
       font-size: 13px;
       font-weight: 500;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-transition: 0.2s;
+      -o-transition: 0.2s;
+      transition: 0.2s; }
+      .menu .menu__list .menu__item-button .menu__item-button-link:hover {
+        -webkit-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+        transform: scale(1.06); }
 
 .promo__block {
   display: -webkit-box;
@@ -164,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
   .promo__block .promo__image {
     width: 417px;
     height: 424px;
-    margin-top: -20px;
+    margin-top: -32px;
     margin-left: 38px; }
   .promo__block .promo__drops {
     background-image: url("image/promo-drops.png");
@@ -175,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     top: 0;
     margin-left: 4px;
-    margin-top: 48px;
+    margin-top: 34px;
     position: absolute; }
   .promo__block .promo__info-text {
     margin: 0px;
@@ -184,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "gagalinregular";
     font-size: 70px;
     font-weight: 400;
-    margin-top: 113px;
+    margin-top: 105px;
     margin-left: 12px;
     letter-spacing: 1.2px; }
   .promo__block .promo__info-description {
@@ -249,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "gagalinregular";
     font-size: 72px;
     font-weight: 400;
-    margin-top: 113px;
+    margin-top: 120px;
     margin-left: 358px; }
   .about .about__list {
     display: -webkit-box;
@@ -381,7 +398,8 @@ h1, h2, h3, h4, h5, h6 {
       font-family: "gagalinregular";
       font-size: 72px;
       font-weight: 400;
-      line-height: 65px; }
+      line-height: 65px;
+      margin-top: 3px; }
     .description .description__info .description__info-text {
       width: 443px;
       color: #ffffff;
@@ -389,7 +407,7 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 14px;
       font-weight: 300;
       line-height: 24px;
-      margin-top: 45px; }
+      margin-top: 42px; }
     .description .description__info .description__info-buy {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -462,6 +480,115 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: -2px;
   position: relative;
   z-index: 20; }
+
+.team {
+  background: url("image/bg-team.png") no-repeat center/cover;
+  position: relative; }
+
+.team__block {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  float: right;
+  width: 49%;
+  background-color: #2f3234;
+  opacity: 0.9; }
+  .team__block .team__title {
+    width: 291px;
+    height: 62px;
+    color: #f9b43b;
+    font-family: "gagalinregular";
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 64.04px;
+    margin-top: 108px;
+    margin-left: 18%; }
+
+.accordeon__list {
+  margin-top: 41px;
+  margin-left: 96px; }
+
+.accordeon__item-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffffff;
+  font-family: "gagalinregular";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28.13px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 24px; }
+  .accordeon__item-name:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 7px solid #f9b43b;
+    margin-right: 11px; }
+
+.accordeon__item-dropdown {
+  display: none; }
+
+.setmenu {
+  background: url("image/bg-setmenu.png") no-repeat center/cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .setmenu__title {
+    color: #ffffff;
+    font-family: "gagalinregular";
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 64px;
+    margin-top: 107px;
+    margin-left: 95px; }
+
+.setmenu__accordeon-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.setmenu__accordeon-item {
+  width: 80px;
+  height: 100%;
+  position: relative;
+  z-index: 10; }
+  .setmenu__accordeon-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(20, 20, 20, 0.7); }
+
+.setmenu__accordeon-item:first-child {
+  background: url("image/1.png") center no-repeat/cover; }
+
+.setmenu__accordeon-item-name {
+  color: #ffffff;
+  font-family: "gagalinregular";
+  font-size: 40px;
+  font-weight: 400;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  z-index: 20; }
+
+.setmenu__accordeon-item-drop {
+  display: none; }
 
 .reviews .reviews__list {
   display: -webkit-box;
