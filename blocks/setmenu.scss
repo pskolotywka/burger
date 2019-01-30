@@ -1,6 +1,7 @@
 .setmenu {
     background: url('image/bg-setmenu.png') no-repeat center / cover;
     display: flex;
+    justify-content: space-between;
     &__title {
         color: #ffffff;
         font-family: "gagalinregular";
@@ -13,27 +14,33 @@
     }
 }
 .setmenu__accordeon-list {
-    width: 100%;
     display: flex;
-    flex-direction: column;
 }
 .setmenu__accordeon-item {
-    width: 80px;
+    width: 7.2vw;;
     height: 100%;
     position: relative;
     z-index: 10;
-    &:after {
+    &:before {
         content: "";
         position: absolute;
-        width: 100%;
-        height: 100%;
         left: 0;
         top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
         background-color: rgba(20, 20, 20, 0.7);
-    }
+        }
+    
 }
 .setmenu__accordeon-item:first-child {
-    background: url('image/1.png') center no-repeat / cover;
+    background: url('image/bg1.png') center no-repeat / cover;
+}
+.setmenu__accordeon-item:nth-child(2) {
+    background: url('image/bg2.png') center no-repeat / cover;
+}
+.setmenu__accordeon-item:last-child {
+    background: url('image/bg3.png') center no-repeat / cover;
 }
 
 .setmenu__accordeon-item-name {
@@ -43,6 +50,8 @@
     font-weight: 400;
     transform: rotate(-90deg);
     z-index: 20;
+    white-space: nowrap;
+    margin-top: 84vh;
 }
 .setmenu__accordeon-item-drop {
     display: none;

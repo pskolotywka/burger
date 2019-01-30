@@ -63,17 +63,23 @@
             <h2 class="about__title">Мы лучшие</h2>
             <ul class="about__list">
                 <li class="about__item">
-                    <div class="about__item-icon"></div>
+                    <svg class="about__item-icon">
+                        <use xlink:href="./sprite.svg#beef"></use>
+                    </svg>
                     <h3 class="about__item-title">100% свежее мясо</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
                 </li>
                 <li class="about__item">
-                    <div class="about__item-icon"></div>
+                    <svg class="about__item-icon">
+                            <use xlink:href="sprite.svg#buns"></use>
+                        </svg>
                     <h3 class="about__item-title">Ручная  сборка</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                 </li>
                 <li class="about__item">
-                    <div class="about__item-icon"></div>
+                    <svg class="about__item-icon">
+                            <use xlink:href="sprite.svg#beef"></use>
+                        </svg>
                     <h3 class="about__item-title">Натуральные ингредиенты</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
                 </li>
@@ -166,6 +172,20 @@
                         <div class="setmenu__accordeon-item-drop-text"></div>
                     </div>
                 </li>
+                <li class="setmenu__accordeon-item">
+                    <div class="setmenu__accordeon-item-name">Вегетарианское</div>
+                    <div class="setmenu__accordeon-item-bg"></div>
+                    <div class="setmenu__accordeon-item-drop">
+                        <div class="setmenu__accordeon-item-drop-text"></div>
+                    </div>
+                </li>
+                <li class="setmenu__accordeon-item">
+                    <div class="setmenu__accordeon-item-name">Диетическое</div>
+                    <div class="setmenu__accordeon-item-bg"></div>
+                    <div class="setmenu__accordeon-item-drop">
+                        <div class="setmenu__accordeon-item-drop-text"></div>
+                    </div>
+                </li>
                 
             </ul>
         </section>
@@ -244,6 +264,103 @@
                     </div>
                 </li>
             </ul>
+        </section>
+        <section class="video sector">
+            <h2 class="video__title">КАК МЫ РАБОТАЕМ</h2>
+        </section>
+        <section class="form sector">
+            <div class="container">
+            <h2 class="form__title">Закажите доставку</h2>
+            <form action="" class="form__order">
+            <div class="flexbox">
+                <div class="form__block">
+                    <div class="form__row">
+                        <label for="" class="form__block-label">
+                            <div class="form__block-name">Имя</div>
+                            <input type="text" class="form__block-input">
+                        </label>
+                        <label for="" class="form__block-label">
+                                <div class="form__block-name">Телефон</div>
+                                <input type="text" class="form__block-input">
+                            </label>
+                    </div>
+                    <div class="form__row">
+                            <label for="" class="form__block-label">
+                                <div class="form__block-name">Улица</div>
+                                <input type="text" class="form__block-input">
+                            </label>
+                        </div>
+                        <div class="form__row">
+                                <label for="" class="form__block-label">
+                                    <div class="form__block-name">Дома</div>
+                                    <input type="text" class="form__block-input">
+                                </label>
+                                <label for="" class="form__block-label">
+                                        <div class="form__block-name">Корпус</div>
+                                        <input type="text" class="form__block-input">
+                                    </label>
+                                    <label for="" class="form__block-label">
+                                            <div class="form__block-name">Квартира</div>
+                                            <input type="text" class="form__block-input">
+                                        </label>
+                                        <label for="" class="form__block-label">
+                                                <div class="form__block-name">Этаж</div>
+                                                <input type="text" class="form__block-input">
+                                            </label>
+                            </div>
+                        </div>
+                    <div class="form__comment">
+                        <div class="form__comment-name">Комментарий</div>
+                        <textarea type="text" value="comments" class="form__comment-input"></textarea>
+                            <div class="radioform__block">
+                                    <label class="radioform__radio-box" tabindex="0">
+                                            <input type="radio" name="yesno" value="no" class="radioform__button">
+                                            <span class="radioform__radio-name"><span class="radioform__radio-name-custom">Потребуется сдача</span></span>
+                                        </label>
+                
+                                        <label class="radioform__radio-box" tabindex="0">
+                                            <input type="radio" name="yesno" value="no" class="radioform__button">
+                                            <span class="radioform__radio-name"><span class="radioform__radio-name-custom">Опалата картой</span></span>
+                                        </label>
+                            </div>
+                            <div class="form__checkbox-form">
+                                <input type="checkbox" class="form__checkbox">
+                                <div class="form__checkbox-name">Не перезванивать</div>
+                            </div>
+                            <div class="form__block-buttons">
+                                <button type="submit" class="form__buttons-send">Заказать</button>
+                                <button type="reset" value="comments" href="" class="form__block-buttons-reset">Очистить</button>
+                            </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+        </section>
+        <section class="map sector">
+            <footer class="footer">
+                <div class="container">
+                <div class="footer__block-contacts">
+                    <div class="footer__block-contacts-adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                    <a href="tel:+7 (812) 377-13-77" class="footer__block-contacts-number">+7 (812) 377-13-77</a>
+                </div>
+                <div class="social">
+                    <ul class="social__list">
+                        <li class="social__item">
+                            <a href="" class="social__item-link"></a>
+                        </li>
+                        <li class="social__item">
+                                <a href="" class="social__item-link"></a>
+                            </li>
+                            <li class="social__item">
+                                    <a href="" class="social__item-link"></a>
+                                </li>
+                                <li class="social__item">
+                                        <a href="" class="social__item-link"></a>
+                                    </li>
+                    </ul>
+                </div>
+            </div>
+            </footer>
         </section>
         <div class="pagination">
             <ul class="pagination__list">

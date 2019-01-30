@@ -1,0 +1,42 @@
+.map {
+    background: url('image/bg-map.png') center no-repeat / cover;
+    position: relative;
+}
+.footer {
+    width: 100%;
+    height: 9.1vh;;
+    background-color: #2f3234;
+    background-image: url('image/bg-footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.footer__block-contacts {
+    width: 275px;
+    height: 40px;
+    margin-top: 0.5vh;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.footer__block-contacts-adress {
+    color: #ffffff;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    font-weight: 300;
+}
+.footer__block-contacts-number {
+    text-decoration: none;
+    color: #e45028;
+    font-family: "ubuntubold";
+    font-weight: 700;
+    margin-top: 3px;
+    margin-left: 20px;
+    letter-spacing: -1px;
+}

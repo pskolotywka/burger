@@ -1,0 +1,166 @@
+.form {
+    background: url('image/form-texture.png') center no-repeat / cover,
+                url('image/form-bg.png') center no-repeat / cover;
+                display: flex;
+                flex-direction: column;
+}
+.form__title {
+    color: #f9b43b;
+    font-family: "gagalinregular";
+    font-size: 72px;
+    font-weight: 400;
+    margin-left: 19.6%;
+    margin-top: 122px;
+}
+.form__block {
+    width: 462px;
+    height: 220px;
+    margin-top: 36px;
+    margin-left: 78px;
+}
+.form__row {
+    display: flex;
+    margin-bottom: 17px;
+}
+.form__block-input {
+    width: 100%;
+    height: 32px;
+    border-radius: 6px;
+    border: none;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+
+    
+}
+.radioform__radio-box {
+    margin-right: 114px;
+}
+.form__block-label {
+    margin-right: 19px;
+    flex: 1; 
+}
+.form__block-label:last-child {
+    margin-right: 0px;
+}
+
+.form__block-name,
+.form__comment-name,
+.radioform__radio-name-custom {
+    color: #ffffff;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+.radioform__radio-name-custom {
+    margin-left: 21px;
+    white-space: nowrap;
+    margin-top: 5px;
+    margin-left: 24px;
+}
+.form__comment {
+    margin-top: 35px;
+    margin-left: 16px;
+}
+.form__comment-input {
+    width: 454px;
+    height: 104px;
+    border: 1px solid #d1cfcb;
+    border-radius: 5px;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+    resize: none;
+    margin-bottom: 5px;
+    margin-left: 3px;
+}
+.checkbox__block,
+.form__comment-block {
+    display: flex;
+}
+.radioform__block {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    margin-left: 0px;
+}
+.radioform__button {
+    display: none;
+}
+.radioform__radio-name {
+    display: flex;
+    align-items: center;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ededed 0%, #ffffff 100%);
+    position: relative;
+    margin-left: 2px;
+    margin-top: 1px;
+    margin-right: 34px;
+}
+.radioform__button:checked + .radioform__radio-name:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #e35028;;
+}
+.form__checkbox-form {
+    display: flex;
+    margin-top: 25px;
+    margin-left: 1px;
+}
+.form__checkbox-name {
+    color: #ffffff;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-left: 13px;
+}
+.form__block-buttons {
+    width: 183px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+    margin-left: 4px;
+}
+.form__buttons-send {
+            border: none;
+            width: 97px;
+            height: 35px;
+            background-color: #e45028;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-family: "ubuntumedium", sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: 0.2s;
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+.form__block-buttons-reset {
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "ubuntulight";
+    font-size: 14px;
+    font-weight: 300;
+}
