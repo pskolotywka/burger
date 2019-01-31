@@ -132,10 +132,12 @@
     .description__composition-calories-number {
         margin-top: 10px;
         margin-left: 2px;
-        font-size: 14px;
+        font-size: 20px;
         position: absolute;
         top: 0;
         left: 0;
+        margin-left: 14px;
+        margin-top: 27px;
     }
     .description__composition-calories-name {
         margin-top: 10px;
@@ -144,6 +146,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        margin-left: 16px;
+        margin-bottom: 2px;
     }
 }
 .description__scroll-next {
