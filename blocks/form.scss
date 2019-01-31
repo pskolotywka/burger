@@ -1,6 +1,6 @@
 .form {
-    background: url('image/form-texture.png') center no-repeat / cover,
-                url('image/form-bg.png') center no-repeat / cover;
+    background: center / cover no-repeat url('image/form-texture.png'),
+                center / cover no-repeat url('image/form-bg.png');
                 display: flex;
                 flex-direction: column;
 }

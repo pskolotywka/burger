@@ -1,11 +1,11 @@
 .description__scroll-prev {
     width: 17px;
     height: 27px;
-    background-image: url('image/scroll-left.png');
     background-repeat: no-repeat;
     margin-top: 311px;
     margin-left: 47px;
     position: relative;
+    transform: rotate(0deg);
     z-index: 20;
 }
 .description {
@@ -133,10 +133,9 @@
 .description__scroll-next {
     width: 17px;
     height: 27px;
-    background-image: url('image/scroll-right.png');
-    background-repeat: no-repeat;
     margin-top: 311px;
     margin-left: -2px;
     position: relative;
+    transform: rotate(0deg);
     z-index: 20;
 }

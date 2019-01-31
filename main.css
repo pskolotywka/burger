@@ -247,13 +247,12 @@ h1, h2, h3, h4, h5, h6 {
 .promo__scroll {
   width: 29px;
   height: 14px;
-  background: url("image/arrow-scroll.png");
   display: block;
   position: absolute;
   left: 0;
   bottom: 0;
   margin-left: 48.5%;
-  margin-bottom: 45px; }
+  margin-bottom: 41px; }
 
 .about {
   background-image: url("image/bg-about.png");
@@ -292,9 +291,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
     letter-spacing: -0.6px;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 24px;
     margin-left: 3px;
-    line-height: 33px; }
+    line-height: 30px; }
   .about__item .about__item-description {
     width: 287px;
     opacity: 0.8;
@@ -316,15 +315,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 36px; }
 
 .about__item:first-child .about__item-icon {
+  width: 97px;
+  height: 89px;
   margin-left: 99px;
   margin-top: 11px; }
 
 .about__item:nth-child(2) .about__item-icon {
+  width: 73px;
+  height: 85px;
   margin-top: 11px;
   margin-left: 110px;
   margin-bottom: 3px; }
 
 .about__item:last-child .about__item-icon {
+  width: 88px;
+  height: 75px;
   margin-top: 14px;
   margin-left: 103px;
   margin-bottom: 14px; }
@@ -332,11 +337,13 @@ h1, h2, h3, h4, h5, h6 {
 .description__scroll-prev {
   width: 17px;
   height: 27px;
-  background-image: url("image/scroll-left.png");
   background-repeat: no-repeat;
   margin-top: 311px;
   margin-left: 47px;
   position: relative;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
   z-index: 20; }
 
 .description {
@@ -466,11 +473,12 @@ h1, h2, h3, h4, h5, h6 {
 .description__scroll-next {
   width: 17px;
   height: 27px;
-  background-image: url("image/scroll-right.png");
-  background-repeat: no-repeat;
   margin-top: 311px;
   margin-left: -2px;
   position: relative;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
   z-index: 20; }
 
 .team {
@@ -566,13 +574,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(20, 20, 20, 0.7); }
 
 .setmenu__accordeon-item:first-child {
-  background: url("image/bg1.png") center no-repeat/cover; }
+  background: center/cover no-repeat url("image/bg1.png"); }
 
 .setmenu__accordeon-item:nth-child(2) {
-  background: url("image/bg2.png") center no-repeat/cover; }
+  background: center/cover no-repeat url("image/bg2.png"); }
 
 .setmenu__accordeon-item:last-child {
-  background: url("image/bg3.png") center no-repeat/cover; }
+  background: center/cover no-repeat url("image/bg3.png"); }
 
 .setmenu__accordeon-item-name {
   color: #ffffff;
@@ -688,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 10.6vh; }
 
 .form {
-  background: url("image/form-texture.png") center no-repeat/cover, url("image/form-bg.png") center no-repeat/cover;
+  background: center/cover no-repeat url("image/form-texture.png"), center/cover no-repeat url("image/form-bg.png");
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -887,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300; }
 
 .map {
-  background: url("image/bg-map.png") center no-repeat/cover;
+  background: center/cover no-repeat url("image/bg-map.png");
   position: relative; }
 
 .footer {

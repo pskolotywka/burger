@@ -34,13 +34,13 @@
     
 }
 .setmenu__accordeon-item:first-child {
-    background: url('image/bg1.png') center no-repeat / cover;
+    background: center / cover  no-repeat url('image/bg1.png');
 }
 .setmenu__accordeon-item:nth-child(2) {
-    background: url('image/bg2.png') center no-repeat / cover;
+    background: center / cover  no-repeat url('image/bg2.png');
 }
 .setmenu__accordeon-item:last-child {
-    background: url('image/bg3.png') center no-repeat / cover;
+    background: center / cover  no-repeat url('image/bg3.png');
 }
 
 .setmenu__accordeon-item-name {
