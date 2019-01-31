@@ -40,3 +40,34 @@
     margin-left: 20px;
     letter-spacing: -1px;
 }
+.social {
+    width: 145px;
+    height: 22px;
+}
+.social__list {
+    display: flex;
+}
+.social__item {
+    width: 23px;
+    height: 20px;
+}
+.social__item:first-child .social__item-icon {
+    width: 23px;
+    height: 13px;
+
+}
+.social__item:nth-child(2) .social__item-icon {
+    width: 20px;
+    height: 20px;
+
+}
+.social__item:nth-child(3) .social__item-icon {
+    width: 20px;
+    height: 20px;
+
+}
+.social__item:last-child .social__item-icon  {
+    width: 20px;
+    height: 16px;
+
+}
