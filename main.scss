@@ -10,3 +10,12 @@
 @import "blocks/form.scss";
 @import "blocks/map.scss";
 
+
+@media screen (max-width: 768px) {
+    .wrapper {
+        min-width: 768px;
+    }
+    .container {
+        max-width: 768px;
+    }
+}
