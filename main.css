@@ -1179,6 +1179,13 @@ h1, h2, h3, h4, h5, h6 {
       margin-top: 17.7%;
       letter-spacing: -0.03rem;
       font-size: 5.2rem; } }
+  @media screen and (max-width: 480px) {
+    .form__title {
+      white-space: normal;
+      text-align: center;
+      font-size: 4rem;
+      margin-left: 2.4%;
+      margin-top: 12.7%; } }
 
 @media screen and (max-width: 768px) {
   .form__content {
@@ -1193,6 +1200,10 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 1.8%; } }
+
+@media screen and (max-width: 480px) {
+  .form__content {
+    margin-top: -1.2%; } }
 
 .form__block {
   width: 28.875rem;
@@ -1260,6 +1271,11 @@ h1, h2, h3, h4, h5, h6 {
     .radioform__radio-name-custom {
       margin-bottom: 2%;
       font-size: 1rem; } }
+  @media screen and (max-width: 480px) {
+    .form__block-name,
+    .form__comment-name,
+    .radioform__radio-name-custom {
+      font-size: 1.06rem; } }
 
 .radioform__radio-name-custom {
   margin-left: 1.3125rem;
@@ -1296,7 +1312,7 @@ h1, h2, h3, h4, h5, h6 {
       height: 7.5rem; } }
   @media screen and (max-width: 480px) {
     .form__comment-input {
-      width: 34.675rem; } }
+      width: 33.675rem; } }
 
 .checkbox__block,
 .form__comment-block {

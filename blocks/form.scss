@@ -18,6 +18,13 @@
         letter-spacing: -0.03rem;
         font-size: 5.2rem;
     }
+    @include phones() {
+        white-space: normal;
+        text-align: center;
+        font-size: 4rem;
+        margin-left: 2.4%;
+        margin-top: 12.7%;
+    }
 }
 .form__content {
     @include tablets() {
@@ -25,6 +32,9 @@
         flex-direction: column;
         justify-content: center;
         margin-top: 1.8%;
+    }
+    @include phones() {
+        margin-top: -1.2%;
     }
 }
 .form__block {
@@ -90,6 +100,9 @@
         margin-bottom: 2%;
         font-size: 1rem;
     }
+    @include phones() {
+        font-size: 1.06rem;
+    }
 }
 .radioform__radio-name-custom {
     margin-left: rem(21px);
@@ -125,7 +138,7 @@
         height: 7.5rem;
     }
     @include phones() {
-        width: 34.675rem;
+        width: 33.675rem;
     }
 }
 .checkbox__block,
