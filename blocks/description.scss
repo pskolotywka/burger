@@ -1,161 +1,262 @@
 .description__scroll-prev {
-    width: 27px;
-    height: 17px;
+    width: rem(27px);
+    height: rem(17px);
     background-repeat: no-repeat;
-    margin-top: 317px;
-    margin-left: 40px;
+    margin-top: rem(317px);
+    margin-left: rem(40px);
     position: relative;
     transform: rotate(90deg);
     z-index: 20;
+    @include phones() {
+        margin-top: 28.4rem;
+        margin-left: 2.5rem;
+        width: 1.8875rem;
+        height: 1.8625rem;
+    }
 }
 .description {
     display: flex;
     background-color: #f9b43b;
     background-image: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
     .description__composition {
-        width: 460px;
-        height: 530px;
-        margin-top: 77px;
-        margin-left: -20px;
+        width: rem(460px);
+        height: rem(530px);
+        margin-top: rem(77px);
+        margin-left: rem(-20px);
+        position: relative;
+        @include tablets() {
+            margin-top: 0%;
+            margin-left: 0%;
+            width: 37.75rem;
+        }
         .description__composition-button {
             border: none;
-            width: 90px;
-            height: 90px;
+            width: 6.325rem;
+            height: 6.325rem;
             background-color: transparent;
             background-color: rgba(227,80,40,0.4);
             border-radius: 5px;
             background-image: url('image/burger.png');
             background-repeat: no-repeat;
-            background-position: 22px 15px;
+            background-position: rem(22px) rem(15px);
             opacity: 0.7;
             display: flex;
-            margin-top: 13px;
-            margin-left: 33px;
+            margin-top: rem(13px);
+            margin-left: rem(33px);
             cursor: pointer;
+            @include phones() {
+                width: 6.825rem;
+                height: 6.825rem;
+                margin-top: 6%;
+                margin-left: 3%;
+            }
             .description__composition-text {
                 color: #ffffff;
                 font-family: "gagalinregular";
-                font-size: 14px;
+                font-size: rem(14px);
                 font-weight: 400;
-                margin-top: 54px;
-                margin-left: 17px;
+                margin-top: rem(54px);
+                margin-left: rem(17px);
+                @include phones() {
+                    margin-top: 4.375rem;
+                    margin-left: 1.4625rem;
+                    font-size: 1rem;
+                }
             }
         }
         .description__composition-image {
-            margin-top: -13px;
+            margin-top: rem(-13px);
             margin-left: 0px;
+            @include phones() {
+                margin-top: 4%;
+                margin-left: 9%;
+                width: 82%;
+            }
         }
     }
     .description__info {
-        width: 480px;
-        height: 400px;
-        margin-top: 135px;
-        margin-left: 54px;
+        width: rem(480px);
+        height: rem(400px);
+        margin-top: rem(135px);
+        margin-left: rem(54px);
+        @include tablets() {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 0%;
+        }
         .description__info-title {
             color: #ffffff;
             font-family: "gagalinregular";
-            font-size: 72px;
+            font-size: rem(72px);
             font-weight: 400;
-            line-height: 65px;
-            margin-top: 3px;
+            line-height: rem(65px);
+            margin-top: rem(3px);
+            @include tablets() {
+                margin-top: -1.26125rem;
+                margin-left: 5%;
+            }
+            @include phones() {
+                margin-top: -2%;
+                margin-left: 5%;
+                font-size: 3.8rem;
+            }
         }
         .description__info-text {
-            width: 443px;
+            width: rem(443px);
             color: #ffffff;
             font-family: "ubuntulight";
-            font-size: 14px;
+            font-size: rem(14px);
             font-weight: 300;
-            line-height: 24px;
-            margin-top: 42px;
+            line-height: rem(24px);
+            margin-top: rem(42px);
+            @include tablets() {
+                width: 41.6875rem;
+                line-height: 1.7rem;
+                margin-top: 3.725rem;
+                margin-bottom: 5%;
+                font-size: 1rem;
+            }
+            @include phones() {
+                width: 34.6875rem;
+                font-size: 1.095rem;
+                margin-top: 1.725rem;
+                margin-bottom: 0%;
+            }
         }
+        
         .description__info-buy {
             display: flex;
             color: #e35028;
             font-family: "ubunturegular";
-            font-size: 30px;
+            font-size: rem(30px);
             font-weight: 400;
-            line-height: 28px;
-            letter-spacing: -0.7px;
-            margin-top: 39px;
+            line-height: rem(28px);
+            letter-spacing: rem(-0.7px);
+            margin-top: rem(39px);
             .description__info-buy-price {
-                font-size: 72px;
-                letter-spacing: -1.8px;
+                font-size: rem(72px);
+                letter-spacing: rem(-1.8px);
                 font-family: "gagalinregular";
-                margin-top: 6px;
+                margin-top: rem(6px);
+                @include tablets() {
+                    font-size: 5rem;
+                }
+                @include phones() {
+                    font-size: 4rem;
+                }
             }
             .description__info-buy-valute {
-                margin-left: 6px;
-                margin-top: 20px;
+                margin-left: rem(6px);
+                margin-top: rem(20px);
                 font-family: "gagalinregular";
             }
             .description__info-buy-button {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 97px;
-                height: 35px;
+                width: rem(97px);
+                height: rem(35px);
                 background-color: #e45028;
                 border-radius: 5px;
-                width: 66px;
+                width: rem(66px);
                 color: #ffffff;
                 font-family: "ubuntumedium";
-                font-size: 13px;
+                font-size: rem(13px);
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.1px;
-                padding-left: 15px;
-                padding-right: 15px;
-                margin-top: 18px;
-                margin-left: 30px;
+                padding-left: rem(15px);
+                padding-right: rem(15px);
+                margin-top: rem(18px);
+                margin-left: rem(30px);
+                @include phones() {
+                    width: 5.525rem;
+                    height: 2.4875rem;
+                    margin-top: 0.125rem;
+                    margin-left: 2.875rem;
+                    font-size: 1rem;
+                }
             }
         }
         
     }
 }
+.description__absolute {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 6%;
+    margin-right: 7%;
+    @include phones() {
+        margin-top: 10%;
+        margin-right: 6.7%;
+    }
+}
+.description__content {
+    display: flex;
+    @include tablets() {
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+    }
+    @include phones() {
+        width: auto;
+        margin-left: -8%;
+    }
+}
 .description__composition-calories-block {
-    width: 60px;
-    height: 76px;
+    width: rem(60px);
+    height: rem(76px);
     color: #ffffff;
     font-family: "gagalinregular";
-    font-size: 20px;
+    font-size: rem(20px);
     font-weight: 400;
-    margin-top: -15px;
-    margin-left: 33px;
+    margin-top: rem(-15px);
+    margin-left: rem(33px);
     position: relative;
     .description__composition-calories-icon {
-        width: 60px;
-        height: 60px;
+        width: rem(60px);
+        height: rem(60px);
         position: absolute;
         top: 0;
         left: 0;
     }
     .description__composition-calories-number {
-        margin-top: 10px;
-        margin-left: 2px;
-        font-size: 20px;
+        margin-top: rem(10px);
+        margin-left: rem(2px);
+        font-size: rem(20px);
         position: absolute;
         top: 0;
         left: 0;
-        margin-left: 14px;
-        margin-top: 27px;
+        margin-left: rem(14px);
+        margin-top: rem(27px);
     }
     .description__composition-calories-name {
-        margin-top: 10px;
-        margin-left: 2px;
-        font-size: 14px;
+        margin-top: rem(10px);
+        margin-left: rem(2px);
+        font-size: rem(14px);
         position: absolute;
         bottom: 0;
         left: 0;
-        margin-left: 16px;
-        margin-bottom: 2px;
+        margin-left: rem(16px);
+        margin-bottom: rem(2px);
     }
 }
 .description__scroll-next {
-    width: 27px;
-    height: 17px;
-    margin-top: 317px;
-    margin-left: -8px;
+    width: rem(27px);
+    height: rem(17px);
+    margin-top: rem(317px);
+    margin-left: rem(-8px);
     position: relative;
     transform: rotate(-90deg);
     z-index: 20;
+    @include phones() {
+        width: 1.8875rem;
+        height: 1.8625rem;
+        margin-top: 28.4rem;
+        margin-left: -3.5rem;
+
+    }
 }

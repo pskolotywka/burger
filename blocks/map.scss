@@ -14,45 +14,78 @@
     bottom: 0;
     left: 0;
     right: 0;
+    @include tablets() {
+        height: 7.1vh;
+    }
+    @include phones() {
+        height: 14.5vh;
+    }
 }
 .footer__block-contacts {
-    width: 275px;
-    height: 40px;
+    width: rem(275px);
+    height: rem(40px);
     margin-top: 0.5vh;
-    margin-left: 80px;
+    margin-left: rem(80px);
     display: flex;
     flex-direction: column;
+    @include tablets() {
+        margin-top: 0.7vh;
+        margin-left: 0rem;
+    }
+    @include phones() {
+        margin-top: 3%;
+        margin-left: 7.4rem;
+    }
 }
 .footer__block-contacts-adress {
     color: #ffffff;
     font-family: "ubuntulight";
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 300;
-    line-height: 24px;
+    line-height: rem(24px);
     font-weight: 300;
+    @include phones() {
+        font-size: 1.1rem;
+        width: 24rem;
+    }
 }
 .footer__block-contacts-number {
     text-decoration: none;
     color: #e45028;
     font-family: "ubuntubold";
     font-weight: 700;
-    margin-top: 3px;
-    margin-left: 20px;
-    letter-spacing: -1px;
+    margin-top: rem(3px);
+    margin-left: rem(20px);
+    letter-spacing: rem(-1px);
+    @include phones() {
+        font-size: 1.125rem;
+        margin-top: 0.6875rem;
+        margin-left: 7.0994rem;
+    }
 }
 .social {
-    width: 145px;
-    height: 22px;
-    margin-top: 17px;
-    margin-right: 77px;
+    width: rem(145px);
+    height: rem(22px);
+    margin-top: rem(17px);
+    margin-right: rem(77px);
+    @include tablets() {
+        margin-top: 1.4625rem;
+        margin-right: 0%;
+    }
+    @include phones() {
+        margin-top: 6%;
+        margin-left: 34%;
+        width: 11.0625rem;
+        height: 1.775rem;
+    }
 }
 .social__list {
     display: flex;
 }
 .social__item {
-    width: 23px;
-    height: 20px;
-    margin-right: 20px;
+    width: rem(23px);
+    height: rem(20px);
+    margin-right: rem(20px);
     opacity: 0.3;
     transition-duration: 0.4s;
     &:hover {
@@ -62,23 +95,23 @@
 
 
 .social__item:first-child .social__item-icon {
-    width: 23px;
-    height: 13px;
+    width: rem(23px);
+    height: rem(13px);
 
 }
 .social__item:nth-child(2) .social__item-icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
 
 }
 .social__item:nth-child(3) .social__item-icon {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
 
 }
 .social__item:last-child .social__item-icon  {
-    width: 20px;
-    height: 16px;
-    margin-top: 2px;
+    width: rem(20px);
+    height: rem(16px);
+    margin-top: rem(2px);
 
 }

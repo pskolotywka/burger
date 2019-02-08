@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="normalize.css">
     <title>Burger</title>
@@ -39,24 +40,29 @@
                                             <li class="menu__item">
                                                     <a href="" class="menu__item-link">Контакты</a>
                                                 </li>
-                                                <li class="menu__item-button">
-                                                        <a href="" class="menu__item-button-link">Заказать</a>
-                                                    </li>
+                                                
                     </ul>
                 </nav>
+                <div class="menu__item-button">
+                    <a href="" class="menu__item-button-link">Заказать</a>
+                    <div class="menu__gamburger">
+                        <a href="" class="menu__gamburger-link">
+                            <div class="menu__gamburger-style"></div>
+                            <div class="menu__gamburger-style"></div>
+                            <div class="menu__gamburger-style"></div>
+                        </a>
+                    </div>
+                </div>
             </header>
             </div>
             <div class="container">
-                <div class="flexbox">
                 <div class="promo__block">
-                        <div class="promo__drops"></div>
-                        <img src="image/burger-promo.png" alt="pic" class="promo__image">
-                        <div class="promo__info container">
+                            <img src="image/burg.png" alt="pic" class="promo__image">
+                        <div class="promo__info">
                             <h1 class="promo__info-text">Мы делаем</h1>
                             <h1 class="promo__info-description">натуральные <br> бургеры</h1>
                         </div>
                 </div>
-            </div>
                 <a href="#" class="promo__scroll-link">
                     <svg class="promo__scroll">
                         <use xlink:href="./sprite.svg#arrow-scroll"></use>
@@ -72,22 +78,28 @@
                     <svg class="about__item-icon">
                         <use xlink:href="./sprite.svg#beef"></use>
                     </svg>
+                    <div class="about__info-block">
                     <h3 class="about__item-title">100% свежее мясо</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+                </div>
                 </li>
                 <li class="about__item">
                     <svg class="about__item-icon">
                         <use xlink:href="./sprite.svg#hand"></use>
                     </svg>
+                    <div class="about__info-block">
                     <h3 class="about__item-title">Ручная  сборка</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+                </div>
                 </li>
                 <li class="about__item">
                     <svg class="about__item-icon">
                             <use xlink:href="sprite.svg#natural"></use>
                         </svg>
+                        <div class="about__info-block">
                     <h3 class="about__item-title">Натуральные ингредиенты</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+                </div>
                 </li>
             </ul>
             </div>
@@ -99,31 +111,34 @@
                             <use xlink:href="./sprite.svg#arrow-scroll"></use>
                         </svg>
                     </a>
-                    <div class="description__composition">
-                        <button type="submit" class="description__composition-button">
-                            <div class="description__composition-icon">
-                                    <div class="description__composition-text">Состав</div>
+                    <div class="description__content">
+                        <div class="description__composition">
+                                    <button type="submit" class="description__composition-button">
+                                        <div class="description__composition-icon">
+                                                <div class="description__composition-text">Состав</div>
+                                        </div>
+                                    </button>
+                            <img src="image/burger1.png" alt="" class="description__composition-image">
+                            <div class="description__absolute">
+                                    <div class="description__composition-calories-block">
+                                            <svg class="description__composition-calories-icon">
+                                                    <use xlink:href="./sprite.svg#kkal"></use>
+                                                </svg>
+                                        <div class="description__composition-calories-number">1200</div>
+                                        <div class="description__composition-calories-name">Ккал</div>
+                                    </div>
                             </div>
-                        </button>
-                <img src="image/burger1.png" alt="" class="description__composition-image">
-                <div class="description__composition-calories-block">
-                        <svg class="description__composition-calories-icon">
-                                <use xlink:href="./sprite.svg#kkal"></use>
-                            </svg>
-                    <div class="description__composition-calories-number">1200</div>
-                    <div class="description__composition-calories-name">Ккал</div>
+                        </div>
+                        <div class="description__info">
+                            <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                            <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                            <div class="description__info-buy">
+                                <span class="description__info-buy-price">500</span>
+                                <span class="description__info-buy-valute">рублей</span>
+                                <a href="#" class="description__info-buy-button">Заказать</a>
+                            </div>
+                        </div>
                 </div>
-            </div>
-            <div class="description__info">
-                <h2 class="description__info-title">Dark Beef <br> Burger</h2>
-                <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
-                <div class="description__info-buy">
-                    <span class="description__info-buy-price">500</span>
-                    <span class="description__info-buy-valute">рублей</span>
-                    <a href="#" class="description__info-buy-button">Заказать</a>
-                </div>
-                
-            </div>
             <a href="#" class="description__scroll-link">
                 <svg class="description__scroll-next">
                     <use xlink:href="./sprite.svg#arrow-scroll"></use>
@@ -289,7 +304,7 @@
             <div class="container">
             <h2 class="form__title">Закажите доставку</h2>
             <form action="" class="form__order">
-            <div class="flexbox">
+            <div class="form__content">
                 <div class="form__block">
                     <div class="form__row">
                         <label for="" class="form__block-label">

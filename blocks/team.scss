@@ -11,41 +11,78 @@
     width: 49%;
     background-color: #2f3234;
     opacity: 0.9;
+    @include tablets() {
+        width: 100%;
+    }
     .team__title {
-        width: 291px;
-        height: 62px;
+        width: rem(291px);
+        height: rem(62px);
         color: #f9b43b;
         font-family: "gagalinregular";
-        font-size: 72px;
+        font-size: rem(72px);
         font-weight: 400;
-        line-height: 64.04px;
-        margin-top: 108px;
+        line-height: rem(64.04px);
+        margin-top: rem(108px);
         margin-left: 18%;
+        @include tablets() {
+            font-size: 5.1rem;
+            margin-top: 28.4%;
+            margin-left: 31%;
+        }
+        @include phones() {
+            font-size: 3.8rem;
+            margin-top: 30.4%;
+            margin-left: 29%;
+        }
+    }
+}
+.team__block-guys {
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 .accordeon__list {
-    margin-top: 41px;
-    margin-left: 96px;
+    margin-top: rem(41px);
+    margin-left: rem(96px);
+    @include tablets() {
+        margin-top: 7.4%;
+        margin-left: 37%;
+        width: 50%;
+    }
+    @include phones() {
+        margin-top: 6%;
+        margin-left: 29%;
+    }
 }
 .accordeon__item-name {
     display: flex;
     align-items: center;
     color: #ffffff;
     font-family: "gagalinregular";
-    font-size: 14px;
+    font-size: rem(14px);
     font-weight: 400;
-    line-height: 28.13px;
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-bottom: 24px;
+    line-height: rem(28.13px);
+    margin-top: rem(0px);
+    margin-left: rem(0px);
+    margin-bottom: rem(24px);
+    @include tablets() {
+        font-size: 1.675rem;
+        letter-spacing: 0.02rem;
+        margin-bottom: 2.37rem;
+    }
+    @include phones() {
+        font-size: 1.875rem;
+    }
     &:before {
         content: "";
         width: 0;
         height: 0;
-        border-left: 4.5px solid transparent;
-        border-right: 4.5px solid transparent;
-        border-top: 7px solid #f9b43b;
-        margin-right: 11px;
+        border-left: rem(4.5px) solid transparent;
+        border-right: rem(4.5px) solid transparent;
+        border-top: rem(7px) solid #f9b43b;
+        margin-right: rem(11px);
     }
 }
 .accordeon__item-dropdown {

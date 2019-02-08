@@ -5,7 +5,10 @@
         .reviews__item {
             position: relative;
             width: 25%;
-            min-height: 325px;
+            min-height: rem(325px);
+            @include tablets() {
+                width: 50%;
+            }
             .reviews__image {
                 width: 100%;
                 height: 100%;
@@ -37,26 +40,26 @@
     &-title {
         color: #ffffff;
         font-family: "gagalinregular";
-        font-size: 14px;
+        font-size: rem(14px);
         font-weight: 400;
-        margin-top: 45px;
-        margin-left: 20px;
+        margin-top: rem(45px);
+        margin-left: rem(20px);
     }
     &-text {
-        width: 226px;
-        height: 133px;
+        width: rem(226px);
+        height: rem(133px);
         color: #ffffff;
         font-family: "ubuntulight";
-        font-size: 14px;
+        font-size: rem(14px);
         font-weight: 300;
-        line-height: 24px;
-        margin-top: 21px;
-        margin-left: 20px;
+        line-height: rem(24px);
+        margin-top: rem(21px);
+        margin-left: rem(20px);
     }
     &-button {
         text-decoration: none;
-        width: 110px;
-        height: 35px;
+        width: rem(110px);
+        height: rem(35px);
         background-color: #2f3234;
         border-radius: 5px;
         display: flex;
@@ -64,11 +67,11 @@
         align-items: center;
         color: #ffffff;
         font-family: "ubuntumedium";
-        font-size: 13px;
+        font-size: rem(13px);
         font-weight: 500;
         text-transform: uppercase;
-        margin-top: 23px;
-        margin-left: 20px;
+        margin-top: rem(23px);
+        margin-left: rem(20px);
     }
 }
 .reviews__item:hover .reviews__description {
