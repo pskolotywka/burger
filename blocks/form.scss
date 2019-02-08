@@ -27,6 +27,7 @@
     }
 }
 .form__content {
+    display: flex;
     @include tablets() {
         display: flex;
         flex-direction: column;
@@ -138,7 +139,7 @@
         height: 7.5rem;
     }
     @include phones() {
-        width: 33.675rem;
+        width: 34.675rem;
     }
 }
 .checkbox__block,

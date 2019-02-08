@@ -2,11 +2,16 @@
     .reviews__list {
         display: flex;
         flex-flow: wrap;    
+        height: 100%;
         .reviews__item {
             position: relative;
             width: 25%;
-            min-height: rem(325px);
             @include tablets() {
+                width: 50%;
+                height: 25%;
+            }
+            @include phones() {
+                height: 25%;
                 width: 50%;
             }
             .reviews__image {

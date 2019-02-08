@@ -184,12 +184,13 @@
     }
 }
 .description__absolute {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 6%;
-    margin-right: 7%;
+    
     @include phones() {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 6%;
+        margin-right: 7%;
         margin-top: 10%;
         margin-right: 6.7%;
     }
@@ -222,6 +223,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0.5;
     }
     .description__composition-calories-number {
         margin-top: rem(10px);

@@ -152,7 +152,6 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-left: -188%;
     }
     @include phones() {
         margin-left: -2%;
@@ -174,8 +173,7 @@
         margin-top: rem(-32px);
         margin-left: 3.375rem;
         @include tablets() {
-            margin-top: 5%;
-            margin-left: -72%;
+            margin-left: 20%;
             margin-bottom: 7%;
         }
         @include phones() {
