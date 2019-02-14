@@ -14,6 +14,11 @@ body {
     padding: 0px;
 }
 
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .flexbox {
     display: flex;
 }

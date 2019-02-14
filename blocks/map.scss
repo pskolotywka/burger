@@ -28,13 +28,15 @@
     margin-left: rem(80px);
     display: flex;
     flex-direction: column;
+    
     @include tablets() {
         margin-top: 0.7vh;
         margin-left: 0rem;
     }
     @include phones() {
         margin-top: 3%;
-        margin-left: 7.4rem;
+        width: 100%;
+        text-align: center;
     }
 }
 .footer__block-contacts-adress {
@@ -46,7 +48,7 @@
     font-weight: 300;
     @include phones() {
         font-size: 1.1rem;
-        width: 24rem;
+        width: 100%;
     }
 }
 .footer__block-contacts-number {
@@ -60,7 +62,7 @@
     @include phones() {
         font-size: 1.125rem;
         margin-top: 0.6875rem;
-        margin-left: 7.0994rem;
+        width: 98%;
     }
 }
 .social {

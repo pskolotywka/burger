@@ -6,13 +6,15 @@
     position: relative;
     display: flex;
     flex-flow: wrap;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 .header {
     display: flex;
     height: rem(90px);
     @include tablets() {
+        justify-content: space-between;
+    }
+    @include desctotablets() {
         justify-content: space-between;
     }
     .logo {
@@ -52,7 +54,9 @@
     width: 73%;
     margin-top: 1.3875rem;
     margin-left: 1.2rem;
-
+    @include desctotablets () {
+        display: none;
+    }
     @include tablets() {
         display: none;
     }
@@ -94,20 +98,38 @@
     @include phones() {
         width: 35.5%;
     }
+    @include desctotablets() {
+        display: flex;
+        align-items: center;
+    }
 }
 .menu__gamburger {
-    @include tablets() {
         width: rem(31px);
         height: rem(36px);
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 6%;
+        display: none;
+    @include desctotablets () {
+        margin-top: 0%;
+        display: flex;
+        justify-content: end;
+    }
+    @include tablets() {
+        display: flex;
         
     }
 }
 .menu__gamburger-style {
     @include tablets() {
+        width: rem(24px);
+        height: rem(4px);
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin-bottom: rem(5px);
+    }
+    @include desctotablets() {
         width: rem(24px);
         height: rem(4px);
         background-color: #ffffff;
@@ -137,15 +159,25 @@
         transform: scale(1.06);
         
     }
+    @include desctotablets() {
+        margin-top: 0%;
+        margin-right: 19%;
+    }
     @include tablets() {
         width: 7.0625rem;
         height: 2.4875rem;
         margin-right: 16%;
-        margin-top: 4%;
+        margin-top: 0%;
         margin-left: 6%;
+    }
+    @include desctotablets() {
+
     }
 }
 .promo__info {
+    @include desctotablets () {
+        width: 34%;
+    }
     @include tablets() {
         display: flex;
         flex-direction: column;
@@ -162,23 +194,33 @@
     display: flex;
     margin-top: 20px;
     position: relative;
+    @include desctotablets () {
+        justify-content: center;
+        align-items: center;
+    }
     @include tablets() {
         flex-direction: column;
         margin-left: 0;
-        margin-top: 9%;
+        margin-top: 24%;
     }
     .promo__image {
         width: rem(451px);
         height: rem(424px);
         margin-top: rem(-32px);
         margin-left: 3.375rem;
+        @include desctotablets() {
+            width: 43%;
+            height: 44%;
+            margin-left: 0;
+            margin-right: 2%;
+        }
         @include tablets() {
-            margin-left: 20%;
+            margin-left: 0%;
             margin-bottom: 7%;
         }
         @include phones() {
             margin-top: 0%;
-            margin-left: 11%;
+            margin-left: 0%;
         }
     }
     .promo__drops {
@@ -195,7 +237,7 @@
     }
     .promo__info-text {
         margin: rem(0px);
-        width: 406px;
+        white-space: nowrap;
         color: #f9b43b;
         font-family: "gagalinregular";
         font-size: rem(70px);
@@ -203,16 +245,20 @@
         margin-top: rem(105px);
         margin-left: rem(12px);
         letter-spacing: rem(1.2px);
+        @include desctotablets () {
+            font-size: 3.375rem;
+            margin-top: 0;
+            margin-left: 0;
+        }
         @include tablets() {
             margin-top: 0%;
         }
         @include phones() {
-            font-size: 4.675rem;
+            font-size: 3.675rem;
             margin-top: 0.7%;
         }
     }
     .promo__info-description {
-        width: rem(406px);
         color: #ffffff;
         font-family: "lifehackmedium";
         font-size: rem(65px);
@@ -221,6 +267,10 @@
         line-height: rem(60px);
         margin-top: rem(22px);
         margin-left: rem(13px);
+        @include desctotablets() {
+            font-size: 3.0625rem;
+            margin: 0;
+        }
     }
 }
 .pagination {

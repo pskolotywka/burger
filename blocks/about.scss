@@ -9,15 +9,19 @@
     font-size: rem(72px);
     font-weight: 400;
     margin-top: rem(120px);
-    margin-left: rem(358px);
+    margin-left: 0%;
+    text-align: center;
+    @include desctotablets () {
+        margin-left: 0%;
+    }
     @include tablets() {
         margin-top: 32%;
-        margin-left: 23%;
+        margin-left: 0%;
         font-size: 5.1rem;
     }
     @include phones() {
         margin-top: 21%;
-        margin-left: 22%;
+        margin-left: 0%;
         font-size: 3.8rem;
     }
     }
@@ -25,6 +29,10 @@
         display: flex;
         margin-left: rem(82px);
         margin-top: rem(33px);
+        @include desctotablets() {
+            margin-left: 0;
+            width: 100%;
+        }
         @include tablets() {
             margin-top: 8%;
             margin-left: 0.6%;
@@ -40,6 +48,9 @@
     width: rem(285px);
     display: flex;
     flex-direction: column;
+    @include desctotablets () {
+        width: 32%;
+    }
     @include tablets() {
         width: 14.8125rem;
     }
@@ -78,10 +89,12 @@
         margin-top: rem(15px);
         margin-left: rem(4px);
         line-height: rem(24px);
+        @include desctotablets () {
+            width: 100%;
+        }
         @include tablets() {
-            width: 16.2375rem;
+            width: 100%;
             font-size: 0.995rem;
-            margin-left: -0.4rem;
             line-height: 1.7rem;
             margin-top: 1.4375rem;
         }

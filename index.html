@@ -10,7 +10,7 @@
     <title>Burger</title>
 </head>
 <body>
-    <div class="wrapper">
+    <butto class="wrapper">
         <section class="promo sector">
             <div class="container">
             <header class="header">
@@ -20,7 +20,7 @@
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <a href="" class="menu__item-link">О нас</a>
+                            <a href="#about" class="menu__item-link">О нас</a>
                         </li>
                         <li class="menu__item">
                                 <a href="" class="menu__item-link">Бургеры</a>
@@ -70,7 +70,7 @@
                 </a>
             </div>
         </section>
-        <section class="about sector">
+        <section class="about sector" id="about">
             <div class="container">
             <h2 class="about__title">Мы лучшие</h2>
             <ul class="about__list">
@@ -151,18 +151,25 @@
                 <div class="team__block-guys">
                 <h2 class="team__title">Команда</h2>
                 <ul class="accordeon__list">
-                    <li class="accordeon__item">
-                        <div class="accordeon__item-name">Дэниэл Редклиф</div>
+                    <li class="accordeon__item accordeon__item-active">
+                        <div class="accordeon__item-name">
+                            <button type="button" class="accordeon__item-name-button">Дэниэл Редклиф</button>
+                    </div>
                         <div class="accordeon__item-dropdown">
-                            <img src="" alt="" class="accordeon__item-dropdown-avatar">
+                            <div class="accordeon__item-dropdown-avatar" style="background-image: url('image/ava-team.png')"></div>
                             <div class="accordeon__item-dropdown-description">
-                                <h5 class="accordeon__item-dropdown-description-title"></h5>
-                                <p class="accordeon__item-dropdown-description-text"></p>
+                                <h5 class="accordeon__item-dropdown-description-title">Оператор
+                                        </h5>
+                                <p class="accordeon__item-dropdown-description-text">
+                                        С радостью поможет подобрать идеальный бургер и оформить заказ.  
+                                        </p>
                             </div>
                         </div>
                     </li>
                     <li class="accordeon__item">
-                            <div class="accordeon__item-name">Ричард Джеймс</div>
+                            <div class="accordeon__item-name">
+                                    <button type="button" class="accordeon__item-name-button">Ричардс Джеймс</button>
+                            </div>
                             <div class="accordeon__item-dropdown">
                                     <img src="" alt="" class="accordeon__item-dropdown-avatar">
                                     <div class="accordeon__item-dropdown-description">
@@ -172,7 +179,9 @@
                             </div>
                         </li>
                         <li class="accordeon__item">
-                                <div class="accordeon__item-name">Джейк Финн</div>
+                                <div class="accordeon__item-name">
+                                        <button type="button" class="accordeon__item-name-button">Джейк Финн</button>
+                                </div>
                                 <div class="accordeon__item-dropdown">
                                         <img src="" alt="" class="accordeon__item-dropdown-avatar">
                                         <div class="accordeon__item-dropdown-description">
@@ -182,7 +191,9 @@
                                 </div>
                             </li>
                             <li class="accordeon__item">
-                                    <div class="accordeon__item-name">Николай Иванов</div>
+                                    <div class="accordeon__item-name">
+                                            <button type="button" class="accordeon__item-name-button">Николай Иванов</button>
+                                    </div>
                                     <div class="accordeon__item-dropdown">
                                             <img src="" alt="" class="accordeon__item-dropdown-avatar">
                                             <div class="accordeon__item-dropdown-description">
@@ -199,20 +210,26 @@
             <h2 class="setmenu__title">меню</h2>
             <ul class="setmenu__accordeon-list">
                 <li class="setmenu__accordeon-item">
-                    <div class="setmenu__accordeon-item-name">для мясоедов</div>
+                    <div class="setmenu__accordeon-item-name">
+                        <button type="button" class="setmenu__accordeon-item-name-button">для мясоедов</button>
+                </div>
                     <div class="setmenu__accordeon-item-drop">
                         <div class="setmenu__accordeon-item-drop-text"></div>
                     </div>
                 </li>
                 <li class="setmenu__accordeon-item">
-                    <div class="setmenu__accordeon-item-name">Вегетарианское</div>
+                        <div class="setmenu__accordeon-item-name">
+                        <button type="button" class="setmenu__accordeon-item-name-button">Вегетарианское</button>
+                </div>
                     <div class="setmenu__accordeon-item-bg"></div>
                     <div class="setmenu__accordeon-item-drop">
                         <div class="setmenu__accordeon-item-drop-text"></div>
                     </div>
                 </li>
                 <li class="setmenu__accordeon-item">
-                    <div class="setmenu__accordeon-item-name">Диетическое</div>
+                        <div class="setmenu__accordeon-item-name">
+                                <button type="button" class="setmenu__accordeon-item-name-button">Диетическое</button>
+                        </div>
                     <div class="setmenu__accordeon-item-bg"></div>
                     <div class="setmenu__accordeon-item-drop">
                         <div class="setmenu__accordeon-item-drop-text"></div>
@@ -307,35 +324,35 @@
             <div class="form__content">
                 <div class="form__block">
                     <div class="form__row">
-                        <label for="" class="form__block-label">
+                        <label class="form__block-label">
                             <div class="form__block-name">Имя</div>
                             <input type="text" class="form__block-input">
                         </label>
-                        <label for="" class="form__block-label">
+                        <label class="form__block-label">
                                 <div class="form__block-name">Телефон</div>
                                 <input type="text" class="form__block-input">
                             </label>
                     </div>
                     <div class="form__row">
-                            <label for="" class="form__block-label">
+                            <label class="form__block-label">
                                 <div class="form__block-name">Улица</div>
                                 <input type="text" class="form__block-input">
                             </label>
                         </div>
                         <div class="form__row">
-                                <label for="" class="form__block-label">
+                                <label class="form__block-label">
                                     <div class="form__block-name">Дома</div>
                                     <input type="text" class="form__block-input">
                                 </label>
-                                <label for="" class="form__block-label">
+                                <label class="form__block-label">
                                         <div class="form__block-name">Корпус</div>
                                         <input type="text" class="form__block-input">
                                     </label>
-                                    <label for="" class="form__block-label">
+                                    <label class="form__block-label">
                                             <div class="form__block-name">Квартира</div>
                                             <input type="text" class="form__block-input">
                                         </label>
-                                        <label for="" class="form__block-label">
+                                        <label class="form__block-label">
                                                 <div class="form__block-name">Этаж</div>
                                                 <input type="text" class="form__block-input">
                                             </label>

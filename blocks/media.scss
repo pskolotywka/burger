@@ -13,3 +13,14 @@
         @content;
     }
 }
+
+@mixin desctotablets () {
+    @media screen and (max-width: $desctotablets) {
+        @content;
+    }
+}
+@mixin tabltophone () {
+    @media screen and (max-width: $tabltophone) {
+        @content;
+    }
+}

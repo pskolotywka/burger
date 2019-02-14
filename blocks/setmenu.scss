@@ -47,6 +47,13 @@
         height: 100%;
         background-color: rgba(20, 20, 20, 0.7);
         }
+        .setmenu__accordeon-item-name-button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            padding: 0;
+            color: #ffffff;
+        }
     
 }
 .setmenu__accordeon-item:first-child {
