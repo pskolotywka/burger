@@ -51,6 +51,22 @@
         width: 100%;
     }
 }
+.footer__block-contact-icon {
+    width: 1rem;
+    height: 1rem;
+    overflow: visible;
+    position: absolute;
+    margin-top: 2.4%;
+    margin-left: 0%;
+    @include tablets() {
+        margin-top: 3%;
+        margin-left: 0%;
+    }
+    @include phones() {
+        margin-top: 6.2%;
+        margin-left: 35%;
+    }
+}
 .footer__block-contacts-number {
     text-decoration: none;
     color: #e45028;
