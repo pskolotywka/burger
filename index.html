@@ -10,7 +10,7 @@
     <title>Burger</title>
 </head>
 <body>
-    <butto class="wrapper">
+    <div class="wrapper">
         <section class="promo sector">
             <div class="container">
             <header class="header">
@@ -23,22 +23,22 @@
                             <a href="#about" class="menu__item-link">О нас</a>
                         </li>
                         <li class="menu__item">
-                                <a href="" class="menu__item-link">Бургеры</a>
+                                <a href="#description" class="menu__item-link">Бургеры</a>
                             </li>
                             <li class="menu__item">
-                                    <a href="" class="menu__item-link">Команда</a>
+                                    <a href="#team" class="menu__item-link">Команда</a>
                                 </li>
                                 <li class="menu__item">
-                                        <a href="" class="menu__item-link">Меню</a>
+                                        <a href="#setmenu" class="menu__item-link">Меню</a>
                                     </li>
                                     <li class="menu__item">
-                                            <a href="" class="menu__item-link">Отзывы</a>
+                                            <a href="#reviews" class="menu__item-link">Отзывы</a>
                                         </li>
                                         <li class="menu__item">
-                                                <a href="" class="menu__item-link">Как мы работаем</a>
+                                                <a href="#video" class="menu__item-link">Как мы работаем</a>
                                             </li>
                                             <li class="menu__item">
-                                                    <a href="" class="menu__item-link">Контакты</a>
+                                                    <a href="#map" class="menu__item-link">Контакты</a>
                                                 </li>
                                                 
                     </ul>
@@ -46,11 +46,11 @@
                 <div class="menu__item-button">
                     <a href="" class="menu__item-button-link">Заказать</a>
                     <div class="menu__gamburger">
-                        <a href="" class="menu__gamburger-link">
-                            <div class="menu__gamburger-style"></div>
-                            <div class="menu__gamburger-style"></div>
-                            <div class="menu__gamburger-style"></div>
-                        </a>
+                        <button href="" class="menu__gamburger-link">
+                            <div class="menu__gamburger-style1"></div>
+                            <div class="menu__gamburger-style2"></div>
+                            <div class="menu__gamburger-style3"></div>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -68,6 +68,8 @@
                         <use xlink:href="./sprite.svg#arrow-scroll"></use>
                     </svg>
                 </a>
+            </div>
+            <div class="menu__popup">
             </div>
         </section>
         <section class="about sector" id="about">
@@ -104,7 +106,7 @@
             </ul>
             </div>
         </section>
-        <section class="description sector">
+        <section class="description sector" id="description">
             <div class="container container-flex">
                     <a href="#" class="description__scroll-prev-link">
                         <svg class="description__scroll-prev">
@@ -146,7 +148,7 @@
             </a>
         </div>
         </section>
-        <section class="team sector">
+        <section class="team sector" id="team">
             <div class="team__block">
                 <div class="team__block-guys">
                 <h2 class="team__title">Команда</h2>
@@ -206,7 +208,7 @@
                 </div>
             </div>
         </section>
-        <section class="setmenu sector">
+        <section class="setmenu sector" id="setmenu">
             <h2 class="setmenu__title">меню</h2>
             <ul class="setmenu__accordeon-list">
                 <li class="setmenu__accordeon-item">
@@ -238,7 +240,7 @@
                 
             </ul>
         </section>
-        <section class="reviews sector">
+        <section class="reviews sector" id="reviews">
             <ul class="reviews__list">
                 <li class="reviews__item">
                     <img src="image/photo6.png" alt="" class="reviews__image">
@@ -314,10 +316,10 @@
                 </li>
             </ul>
         </section>
-        <section class="video sector">
+        <section class="video sector" id="video">
             <h2 class="video__title">КАК МЫ РАБОТАЕМ</h2>
         </section>
-        <section class="form sector">
+        <section class="form sector" id="form">
             <div class="container">
             <h2 class="form__title">Закажите доставку</h2>
             <form action="" class="form__order">
@@ -385,7 +387,7 @@
             </form>
             </div>
         </section>
-        <section class="map sector">
+        <section class="map sector" id="map">
             <footer class="footer">
                 <div class="container flexboxsb">
                 <div class="footer__block-contacts">
@@ -478,5 +480,6 @@
             </ul>
         </div>
     </div>
+    <script src="modal.js"></script>
 </body>
 </html>
