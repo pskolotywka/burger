@@ -11,3 +11,10 @@ button.addEventListener('click', e => {
 
 })
 
+
+const descBtn = document.querySelector('.description__composition-button');
+const descPopup = document.querySelector('.description__composition-drop');
+
+descBtn.addEventListener('click', e => {
+    descPopup.classList.toggle('descopened');
+})

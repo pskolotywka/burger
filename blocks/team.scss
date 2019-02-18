@@ -94,11 +94,10 @@
 }
 .accordeon__item-dropdown {
     display: flex;
-    height: 0;
     overflow: hidden;
     .accordeon__item-dropdown-avatar {
-        width: 11rem;
-        height: 7.14rem;
+        width: 6rem;
+        height: 6rem;
         border-radius: 50%;
         background-position: center center;
         background-size: cover;

@@ -108,11 +108,11 @@
         </section>
         <section class="description sector" id="description">
             <div class="container container-flex">
-                    <a href="#" class="description__scroll-prev-link">
+                    <button type="button" class="description__scroll-prev-link">
                         <svg class="description__scroll-prev">
                             <use xlink:href="./sprite.svg#arrow-scroll"></use>
                         </svg>
-                    </a>
+                    </button>
                     <div class="description__content">
                         <div class="description__composition">
                                     <button type="submit" class="description__composition-button">
@@ -120,6 +120,17 @@
                                                 <div class="description__composition-text">Состав</div>
                                         </div>
                                     </button>
+                                    <div class="description__composition-drop">
+                                        <ul class="description__composition-drop-list">
+                                            <li class="description__composition-drop-item">
+                                                <svg class="description__composition-drop-icon">
+                                                    <use xlink:href="./sprite.svg#meat"></use>
+                                                </svg>
+                                                <div class="description__composition-drop-name">Говядина</div>
+                                                <div class="description__composition-drop-number">300 г</div>
+                                            </li>
+                                        </ul>
+                                    </div>
                             <img src="image/burger1.png" alt="" class="description__composition-image">
                             <div class="description__absolute">
                                     <div class="description__composition-calories-block">
@@ -141,11 +152,11 @@
                             </div>
                         </div>
                 </div>
-            <a href="#" class="description__scroll-link">
+            <button type="button" class="description__scroll-next-link">
                 <svg class="description__scroll-next">
                     <use xlink:href="./sprite.svg#arrow-scroll"></use>
                 </svg>
-            </a>
+            </button>
         </div>
         </section>
         <section class="team sector" id="team">
@@ -158,7 +169,9 @@
                             <button type="button" class="accordeon__item-name-button">Дэниэл Редклиф</button>
                     </div>
                         <div class="accordeon__item-dropdown">
-                            <div class="accordeon__item-dropdown-avatar" style="background-image: url('image/ava-team.png')"></div>
+                            <div class="accordeon__item-dropdown-icon">
+                                <img src="image/ava-team.png" alt="" class="accordeon__item-dropdown-avatar">
+                            </div>
                             <div class="accordeon__item-dropdown-description">
                                 <h5 class="accordeon__item-dropdown-description-title">Оператор
                                         </h5>
@@ -211,7 +224,7 @@
         <section class="setmenu sector" id="setmenu">
             <h2 class="setmenu__title">меню</h2>
             <ul class="setmenu__accordeon-list">
-                <li class="setmenu__accordeon-item">
+                <li class="setmenu__accordeon-item setmenu__accordeon-item-active">
                     <div class="setmenu__accordeon-item-name">
                         <button type="button" class="setmenu__accordeon-item-name-button">для мясоедов</button>
                 </div>

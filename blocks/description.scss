@@ -1,8 +1,18 @@
+
+
+
+.description__scroll-prev-link {
+    border: none;
+    background-color: transparent;
+}
+.description__scroll-next-link {
+    border: none;
+    background-color: transparent;
+}
 .description__scroll-prev {
     width: rem(27px);
     height: rem(17px);
     background-repeat: no-repeat;
-    margin-top: rem(317px);
     margin-left: 0rem;
     position: relative;
     transform: rotate(90deg);
@@ -25,14 +35,15 @@
         margin-left: rem(-20px);
         position: relative;
         @include desctotablets () {
-            height: 28.125rem;
+            height: 24.125rem;
+            margin-top: 1.8125rem;
         }
         @include tablets() {
             margin-top: 0%;
             margin-left: 0%;
             width: 100%;
-            height: 32.125rem;
-            margin-bottom: 14%;
+            height: 30.125rem;
+            
         }
         .description__composition-button {
             border: none;
@@ -43,7 +54,7 @@
             border-radius: 5px;
             background-image: url('image/burger.png');
             background-repeat: no-repeat;
-            background-position: rem(22px) rem(15px);
+            background-position: rem(27px) rem(15px);
             opacity: 0.7;
             display: flex;
             margin-top: rem(13px);
@@ -61,7 +72,7 @@
                 font-size: rem(14px);
                 font-weight: 400;
                 margin-top: rem(54px);
-                margin-left: rem(17px);
+                margin-left: rem(21px);
                 @include phones() {
                     margin-top: 4.375rem;
                     margin-left: 1.4625rem;
@@ -72,12 +83,17 @@
         .description__composition-image {
             margin-top: rem(-13px);
             margin-left: 0px;
+            @include desctotablets() {
+                width: 85%; 
+                margin-left: 10%;
+            }
             @include tablets() {
-                width: 100%;
+                width: 82%;
+                margin-left: 9%;
             }
             @include phones() {
                 margin-top: 4%;
-                margin-left: 9%;
+                margin-left: 5%;
                 width: 82%;
             }
         }
@@ -204,6 +220,36 @@
         
     }
 }
+.description__composition-drop {
+    opacity: 0;
+    transition: 0.4s;
+}
+.descopened {
+    opacity: 1;
+}
+.description__composition-drop-list {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    left: 0;
+    top: 0;
+    margin-left: 29%;
+    margin-top: 3%;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 3%;
+}
+.description__composition-drop-icon {
+    width: 45%;
+    height: 45%;
+}
+.description__composition-drop-name {
+    font-family: "ubuntumedium";
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 .description__absolute {
     @include desctotablets () {
         position: absolute;
@@ -281,7 +327,6 @@
 .description__scroll-next {
     width: rem(27px);
     height: rem(17px);
-    margin-top: rem(317px);
     margin-left: rem(-8px);
     position: relative;
     transform: rotate(-90deg);
