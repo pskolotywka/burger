@@ -221,10 +221,12 @@
     }
 }
 .description__composition-drop {
+    display: none;
     opacity: 0;
     transition: 0.4s;
 }
 .descopened {
+    display: block;
     opacity: 1;
 }
 .description__composition-drop-list {
