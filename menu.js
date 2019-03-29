@@ -11,7 +11,7 @@ button.addEventListener('click', e => {
     closeStyle.classList.toggle('close');
 })
 
-for (let i = 0; 0 < menuBtn.length; i++ ) {
+for (let i = 0; i < menuBtn.length; i++ ) {
     menuBtn[i].addEventListener('click', () => {
         menuModal.classList.remove('menu__modal');
         popup.classList.remove('opened');
