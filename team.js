@@ -1,19 +1,30 @@
 
 const eBtn = document.querySelectorAll('.accordeon__item-name-button');
-const content = document.querySelectorAll('.accordeon__item-dropdown');
+
 
 for (const item of eBtn) {
     item.addEventListener('click', e => {
+        const content = document.querySelectorAll('.accordeon__item-dropdown');
         const curItem = e.currentTarget;
-        const btnParent = item.parentNode;
+        const btnParent = curItem.parentNode;
         const contentel = btnParent.nextElementSibling;
-        if (item.classList.contains('active')) {
-            item.classList.remove('active');
+        const contBlock = contentel.firstElementChild;
+        const reqHeight = getComputedStyle(contBlock).height;
+        
+
+        if (curItem.classList.contains('active')) {
+            curItem.classList.remove('active');
             contentel.style.height = '0px';
         }
         else {
-            item.classList.add('active');
-            contentel.style.height = '100%'
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.height = '0px';
+            }
+            for (let i = 0; i < eBtn.length; i++ ) {
+                eBtn[i].classList.remove('active');
+            }
+            curItem.classList.add('active');
+            contentel.style.height = '100%';
         }
     })
 }
