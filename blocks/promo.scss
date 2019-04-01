@@ -55,18 +55,18 @@
     }
 }
 .menu__popup {
-    position: absolute;
+    position: fixed;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.93);
     display: none;
-    opacity: 0;
-    transition: opacity 2s ease;
+    transition-duration: .4s;
 
 }
 .opened {
     display: block;
-    opacity: 1;
+    
     
 
 }
@@ -82,16 +82,19 @@
 
 
 .menu {
+    z-index: 1001;
     width: 73%;
     margin-top: 1.3875rem;
     margin-left: 1.2rem;
 
     @include desctotablets () {
+        z-index: 1001;
         display: none;
         opacity: 0;
         position: absolute;
     }
     @include tablets() {
+        z-index: 1001;
         opacity: 0;
         display: none;
     }
@@ -142,15 +145,16 @@
 }
 .menu__modal {
     @include desctotablets() {
+        position: fixed;
+        z-index: 1001;
         display: flex;
-        opacity: 1;
+        opacity: 0;
         flex-direction: column;
-        z-index: 200;
         height: 100%;
         justify-content: center;
         width: 92%;
         margin-left: 0%;
-        transition-duration: 0.4s;   
+        transition-duration: .4s;   
     }
     @include tablets {
         width: 92%;
@@ -194,6 +198,10 @@
         display: flex;
         
     }
+}
+
+.close {
+    position: fixed;
 }
 
     .close .menu__gamburger-style1 {
