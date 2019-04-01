@@ -52,6 +52,9 @@
     
     &:hover {
         text-decoration: underline;
+        @include desctotablets() {
+            color: #f9b43b;
+        }
     }
 }
 .menu__popup {

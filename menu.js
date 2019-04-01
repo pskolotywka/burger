@@ -45,9 +45,9 @@ for (let i = 0; i < menuBtn.length; i++ ) {
             setTimeout(function fooM () {
                 menuModal.classList.remove('menu__modal');
             }, 400)
-        }
-        else {
-            popup.classList.remove('opened');
+            setTimeout(function fooO() {
+                popup.classList.remove('opened');
+            }, 400)
         }
     })
 }
