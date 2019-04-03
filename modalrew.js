@@ -14,9 +14,9 @@ const contentText = document.querySelector('.reviews__modal-text');
 for (let i = 0; i < mybutton.length; i++) {
     mybutton[i].addEventListener('click', e => {
         const thisBtn = e.currentTarget; // отслеживаем событие по клику
-        contentWrap = thisBtn.parentNode; // через парентНод выходим к общему родителю контента
-        const title = contentWrap.querySelector('.reviews__description-title').innerHTML; // в переменную присваиваем значение нужного контента
-        const text = contentWrap.querySelector('.reviews__description-text').innerHTML;
+        contentParent = thisBtn.parentNode; // через парентНод выходим к общему родителю контента
+        const title = contentParent.querySelector('.reviews__description-title').innerHTML; // в переменную присваиваем значение нужного контента
+        const text = contentParent.querySelector('.reviews__description-text').innerHTML;
         contentTitle.innerHTML = title; // приравниваем присвоенное значение выше к значению контента в модальном окне
         contentText.innerHTML = text;
         popups.classList.add('modalshow'); // добавляем активный класс что бы поставить display block
