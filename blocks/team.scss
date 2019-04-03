@@ -98,7 +98,7 @@
     display: block;
     opacity: 1;
 }
-.teamactive {
+.accordeon__item-name-button::before.active {
     transform: rotate(180deg);
 }
 .accordeon__item-dropdown {

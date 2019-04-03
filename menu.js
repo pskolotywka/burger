@@ -16,6 +16,7 @@ button.addEventListener('click', e => {
             popup.style.opacity = '1';
             menuModal.style.opacity = '1';
         }, 30) 
+        
     }
     else {
         if (menuModal.style.opacity > 0) {
@@ -26,16 +27,34 @@ button.addEventListener('click', e => {
             }, 30)
             setTimeout(function fooM () {
                 menuModal.classList.remove('menu__modal');
+                popup.classList.remove('opened');
             }, 400)
-        }
-        else {
-            popup.classList.remove('opened');
         }
     }  
 });
 
-for (let i = 0; i < menuBtn.length; i++ ) {
-    menuBtn[i].addEventListener('click', () => {
+    for (let i = 0; i < menuBtn.length; i++ ) {
+        menuBtn[i].addEventListener('click', function closed() {
+            if (menuModal.style.opacity > 0) {
+                closeStyle.classList.remove('close');
+                setTimeout(function fooC() {
+                    popup.style.opacity = '0';
+                    menuModal.style.opacity = '0';
+                }, 30)
+                setTimeout(function fooM () {
+                    menuModal.classList.remove('menu__modal');
+                }, 400)
+                setTimeout(function fooO() {
+                    popup.classList.remove('opened');
+                }, 400)
+            }
+        })
+    }
+
+
+
+document.addEventListener('keydown', e => {
+    if (e.keyCode === 27) {
         if (menuModal.style.opacity > 0) {
             closeStyle.classList.remove('close');
             setTimeout(function fooC() {
@@ -49,9 +68,8 @@ for (let i = 0; i < menuBtn.length; i++ ) {
                 popup.classList.remove('opened');
             }, 400)
         }
-    })
-}
-
+    }
+})
 
 
 

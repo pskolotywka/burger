@@ -11,7 +11,6 @@ for (const item of eBtn) {
         const contBlock = contentel.firstElementChild;
         const reqHeight = getComputedStyle(contBlock).height;
         
-
         if (curItem.classList.contains('active')) {
             curItem.classList.remove('active');
             contentel.style.height = '0px';
@@ -23,8 +22,9 @@ for (const item of eBtn) {
             for (let i = 0; i < eBtn.length; i++ ) {
                 eBtn[i].classList.remove('active');
             }
+
             curItem.classList.add('active');
-            contentel.style.height = '100%';
+            contentel.style.height = reqHeight;
         }
     })
 }
