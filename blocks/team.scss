@@ -87,6 +87,10 @@
     }
 }
 
+.accordeon__item-dropdown-block-b {
+    display: flex;
+}
+
 .accordeon__item-name-button {
     border: none;
     background: transparent;
@@ -103,8 +107,11 @@
 }
 .accordeon__item-dropdown {
     display: flex;
+    width: 80%;
     overflow: hidden;
     height: 0;
+    transition: .4s;
+    animation: 0;
     .accordeon__item-dropdown-avatar {
         width: 6rem;
         height: 6rem;
@@ -128,3 +135,24 @@
     line-height: rem(24.01px);
     }
 }
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
