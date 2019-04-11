@@ -13,9 +13,10 @@ for (const item of eBtn) {
         const contBlock = contentel.firstElementChild;
         const contBlockb = contBlock.firstElementChild;
         const reqHeight = getComputedStyle(contBlockb).height;
-
+        console.log(reqHeight)
         if (li.classList.contains('active')) {
             li.classList.remove('active');
+            item.classList.remove('active');
             contentel.style.height = '0px';
             setTimeout( function fooOut() {
                 contentel.style.animation = 'fadeOut .6s'
@@ -30,6 +31,7 @@ for (const item of eBtn) {
             }
 
             li.classList.add('active');
+            item.classList.add('active');
             contentel.style.height = reqHeight;
             setTimeout( function fooIn() {
                 contentel.style.animation = 'fadeIn .6s'

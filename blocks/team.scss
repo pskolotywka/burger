@@ -23,7 +23,7 @@
         font-weight: 400;
         line-height: rem(64.04px);
         margin-top: rem(108px);
-        margin-left: 18%;
+        margin-left: 15%;
         @include tablets() {
             font-size: 5.1rem;
             margin-top: 28.4%;
@@ -84,6 +84,7 @@
         border-right: rem(4.5px) solid transparent;
         border-top: rem(7px) solid #f9b43b;
         margin-right: rem(11px);
+        transition: .4s;
     }
 }
 
@@ -135,7 +136,9 @@
     line-height: rem(24.01px);
     }
 }
-
+.active .accordeon__item-name-button:before {
+    transform: rotate(-180deg);
+}
 
 @keyframes fadeIn {
     from {

@@ -1,7 +1,6 @@
 .setmenu {
     background: url('image/bg-setmenu.png') no-repeat center / cover;
-    display: flex;
-    justify-content: space-between;
+    position: relative;
     &__title {
         color: #ffffff;
         font-family: "gagalinregular";
@@ -10,6 +9,7 @@
         line-height: rem(64px);
         margin-top: rem(107px);
         margin-left: rem(95px);
+        position: absolute;
         @include tablets() {
             margin-top: 15%;
             margin-left: 3%;
@@ -23,70 +23,89 @@
 
     }
 }
-.setmenu__accordeon-list {
+.setmenu__list {
     display: flex;
+    justify-content: flex-end;
+    width: auto;
 }
-.setmenu__accordeon-item {
-    width: 7.2vw;;
+.setmenu__item {
+    height: 100vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.setmenu__item-dropdown {
+    transition: .4s;
+    color: white;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.14);
+    width: 0px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.setmenu__item-name {
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 7.5rem;
     height: 100%;
     position: relative;
-    cursor: pointer;
-    z-index: 10;
-    @include tablets() {
-        width: 10.4vw;
-    }
-    @include phones() {
-        width: 16.7vw;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(20, 20, 20, 0.7);
-        }
-        .setmenu__accordeon-item-name-button {
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            padding: 0;
-            color: #ffffff;
-        }
-    
+    transition: .4s;
 }
+.setmenu__item-button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: 'gagalinregular';
+    transform: rotate(-90deg) translateY(-150%) translateX(80%);
+    white-space: nowrap;
+    bottom: 0;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+}
+.setmenu__item-button.active {
+    color: #f9b43b;
+}
+.setmenu__item-content {
+    min-width: 350px;
+    overflow: hidden;
+
+}
+.setmenu__item-text {
+    margin: 0;
+    padding: rem(20px) rem(15px);
+    font-family: "ubuntulight";
+    font-weight: 300;
+}
+.setmenu__item-name:hover {
+    color: black;
+}
+
+
+
 .setmenu__accordeon-item:active {
 
 }
-.setmenu__accordeon-item:first-child {
-    background: center / cover  no-repeat url('image/bg1.png');
+.setmenu__item:first-child .setmenu__item-name {
+    background: linear-gradient( bottom right, black, rgba(0, 0, 0, 0.6)),center / cover  no-repeat url('image/bg1.png');
 }
-.setmenu__accordeon-item:nth-child(2) {
-    background: center / cover  no-repeat url('image/bg2.png');
+.setmenu__item:nth-child(2) .setmenu__item-name {
+    background: linear-gradient( bottom right, black, rgba(0, 0, 0, 0.6)),center / cover  no-repeat url('image/bg2.png');
 }
-.setmenu__accordeon-item:last-child {
-    background: center / cover  no-repeat url('image/bg3.png');
-}
-
-.setmenu__accordeon-item-name {
-    color: #ffffff;
-    font-family: "gagalinregular";
-    font-size: rem(40px);
-    font-weight: 400;
-    transform: rotate(-90deg);
-    z-index: 20;
-    white-space: nowrap;
-    margin-top: 84vh;
-    @include tablets() {
-        margin-top: 90vh;
-        letter-spacing: 0.2rem;
-    }
-    @include phones() {
-        margin-top: 84.7vh;
-        font-size: 2.7rem;
-    }
-}
-.setmenu__accordeon-item-drop {
-    display: none;
+.setmenu__item:last-child .setmenu__item-name {
+    background: linear-gradient( bottom right, black, rgba(0, 0, 0, 0.6)),center / cover  no-repeat url('image/bg3.png');
 }
