@@ -48,8 +48,8 @@
     margin-left: rem(96px);
     @include tablets() {
         margin-top: 7.4%;
-        margin-left: 37%;
-        width: 50%;
+        width: 38%;
+        margin: 0 auto;
     }
     @include phones() {
         margin-top: 6%;

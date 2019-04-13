@@ -46,7 +46,7 @@
                 <div class="menu__item-button">
                     <a href="" class="menu__item-button-link">Заказать</a>
                     <div class="menu__gamburger">
-                        <button href="" class="menu__gamburger-link">
+                        <button class="menu__gamburger-link">
                             <div class="menu__gamburger-style1"></div>
                             <div class="menu__gamburger-style2"></div>
                             <div class="menu__gamburger-style3"></div>
@@ -113,6 +113,7 @@
                             <use xlink:href="./sprite.svg#arrow-scroll"></use>
                         </svg>
                     </button>
+                    
                     <div class="description__content">
                         <div class="description__composition">
                                     <button type="submit" class="description__composition-button">
@@ -387,47 +388,47 @@
         <section class="form sector" id="form">
             <div class="container">
             <h2 class="form__title">Закажите доставку</h2>
-            <form action="" class="form__order">
+            <form action="" id="form" class="form__order">
             <div class="form__content">
                 <div class="form__block">
                     <div class="form__row">
                         <label class="form__block-label">
                             <div class="form__block-name">Имя</div>
-                            <input type="text" class="form__block-input">
+                            <input type="text" name="user_name" value="" class="form__block-input" required>
                         </label>
                         <label class="form__block-label">
                                 <div class="form__block-name">Телефон</div>
-                                <input type="text" class="form__block-input">
+                                <input type="text" name="user_phone" value="" class="form__block-input" required>
                             </label>
                     </div>
                     <div class="form__row">
                             <label class="form__block-label">
                                 <div class="form__block-name">Улица</div>
-                                <input type="text" class="form__block-input">
+                                <input type="text" name="user_street" class="form__block-input">
                             </label>
                         </div>
                         <div class="form__row">
                                 <label class="form__block-label">
                                     <div class="form__block-name">Дома</div>
-                                    <input type="text" class="form__block-input">
+                                    <input type="text" name="user_house" class="form__block-input">
                                 </label>
                                 <label class="form__block-label">
                                         <div class="form__block-name">Корпус</div>
-                                        <input type="text" class="form__block-input">
+                                        <input type="text" name="user_part" class="form__block-input">
                                     </label>
                                     <label class="form__block-label">
                                             <div class="form__block-name">Квартира</div>
-                                            <input type="text" class="form__block-input">
+                                            <input type="text" name="user_flat" class="form__block-input">
                                         </label>
                                         <label class="form__block-label">
                                                 <div class="form__block-name">Этаж</div>
-                                                <input type="text" class="form__block-input">
+                                                <input type="text" name="user_floor" class="form__block-input">
                                             </label>
                             </div>
                         </div>
                     <div class="form__comment">
                         <div class="form__comment-name">Комментарий</div>
-                        <textarea type="text" value="comments" class="form__comment-input"></textarea>
+                        <textarea type="text" value="comments" name="user_text" class="form__comment-input"></textarea>
                             <div class="radioform__block">
                                     <label class="radioform__radio-box" tabindex="0">
                                             <input type="radio" name="yesno" value="no" class="radioform__button">
@@ -550,6 +551,7 @@
     <script src="team.js"></script>
     <script src="accordeon.js"></script>
     <script src="modalrew.js"></script>
+    <script src="form.js"></script>
     <script type="text/template" id="modal-template">
     </script>
 </body>
