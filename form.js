@@ -48,7 +48,7 @@ form.addEventListener('submit', function(e) {
       
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
   xhr.send(JSON.stringify(formData));
   xhr.addEventListener('load', e => {
     if (xhr.readyState === 4) {
