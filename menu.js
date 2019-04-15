@@ -1,4 +1,4 @@
-const button = document.querySelector('.menu__gamburger-link');
+const buttonm = document.querySelector('.menu__gamburger-link');
 const popup = document.querySelector('.menu__popup');
 const menuModalStyle = document.querySelector('.menu__modal');
 const menuModal = document.querySelector('.menu');
@@ -7,7 +7,7 @@ const closeStyle = document.querySelector('.menu__gamburger-link');
 const menuBtn = document.querySelectorAll('.menu__item-link');
 
 
-button.addEventListener('click', e => {
+buttonm.addEventListener('click', e => {
     if (!(menuModal.classList.contains('menu__modal'))) {
         menuModal.classList.add('menu__modal');
         closeStyle.classList.add('close');

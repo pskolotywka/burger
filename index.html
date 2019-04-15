@@ -388,17 +388,17 @@
         <section class="form sector" id="form">
             <div class="container">
             <h2 class="form__title">Закажите доставку</h2>
-            <form action="" id="form" class="form__order">
+            <form action="post" id="form" class="form__order">
             <div class="form__content">
                 <div class="form__block">
                     <div class="form__row">
                         <label class="form__block-label">
                             <div class="form__block-name">Имя</div>
-                            <input type="text" name="user_name" value="" class="form__block-input" required>
+                            <input type="text" name="user_name" id="user_name" class="form__block-input" required>
                         </label>
                         <label class="form__block-label">
                                 <div class="form__block-name">Телефон</div>
-                                <input type="text" name="user_phone" value="" class="form__block-input" required>
+                                <input type="text" name="user_phone" id="user_phone" class="form__block-input" required>
                             </label>
                     </div>
                     <div class="form__row">
@@ -428,7 +428,7 @@
                         </div>
                     <div class="form__comment">
                         <div class="form__comment-name">Комментарий</div>
-                        <textarea type="text" value="comments" name="user_text" class="form__comment-input"></textarea>
+                        <textarea type="text" value="comments" name="user_text" id="user_comment" class="form__comment-input"></textarea>
                             <div class="radioform__block">
                                     <label class="radioform__radio-box" tabindex="0">
                                             <input type="radio" name="yesno" value="no" class="radioform__button">
@@ -552,7 +552,5 @@
     <script src="accordeon.js"></script>
     <script src="modalrew.js"></script>
     <script src="form.js"></script>
-    <script type="text/template" id="modal-template">
-    </script>
 </body>
 </html>
