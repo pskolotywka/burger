@@ -49,7 +49,11 @@ form.addEventListener('submit', function(e) {
   const xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
   xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+<<<<<<< HEAD
   xhr.send(formData);
+=======
+  xhr.send(JSON.stringify(formData));
+>>>>>>> fb4bcb193a4f400c970578324793ffae81919169
   xhr.addEventListener('load', e => {
     if (xhr.readyState === 4) {
       modalopen();
