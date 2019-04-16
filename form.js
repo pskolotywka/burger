@@ -50,7 +50,7 @@ form.addEventListener('submit', function(e) {
   xhr.responseType = 'json';
   xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
   xhr.send(formData);
-  xhr.send(JSON.stringify(formData));
+  xhr.send(formData);
   console.log(xhr.response.status);
   xhr.addEventListener('load', e => {
     if (xhr.readyState === 4) {
