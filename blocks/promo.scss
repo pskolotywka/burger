@@ -1,5 +1,5 @@
 .promo {
-    background: linear-gradient( bottom right, black, rgba(0, 0, 0, 0.6)), url('image/texture.png') fixed, url('image/promo-image.png') fixed;
+    background: linear-gradient( bottom right, black, rgba(0, 0, 0, 0.8)), url('image/texture.png') fixed, url('image/promo-image.png') fixed;
     background-repeat: no-repeat;
     background-position: center, center, center;
     background-size: cover;
@@ -17,10 +17,13 @@
     @include desctotablets() {
         justify-content: space-between;
     }
+    @include phones() {
+        padding: 0px 10px;
+    }
     .logo {
         width: rem(92px);
         height: rem(69px);
-        margin-top: rem(12px);
+        margin-top: 1.2rem;
         margin-left: 2.875rem;
         z-index: 2000;
         @include desctotablets {
@@ -38,6 +41,7 @@
         }
     }
 }
+
 .menu__item-link {
     text-decoration: none;
     color: #ffffff;
@@ -45,16 +49,18 @@
     font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
-    @include desctotablets() {
-        margin-bottom: 2%;
-        font-size: 1.2rem;
-    }
-    
+    border-bottom: 1px solid transparent;
+    transition: .2s;
     &:hover {
-        text-decoration: underline;
+        border-color: #f9b43b;
         @include desctotablets() {
             color: #f9b43b;
+            border-color: transparent;
         }
+    }
+    @include desctotablets() {
+        font-size: 1.2rem;
+        margin: 1rem;
     }
 }
 .menu__popup {
@@ -62,7 +68,7 @@
     z-index: 1000;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.93);
+    background-color: rgba(48, 48, 48, 0.98);
     display: none;
     transition-duration: .4s;
 
@@ -95,6 +101,7 @@
         display: none;
         opacity: 0;
         position: absolute;
+        margin-top: 0px;
     }
     @include tablets() {
         z-index: 1001;
@@ -107,19 +114,22 @@
         margin-top: rem(16px);
         margin-left: rem(37px);
         @include desctotablets() {
+            margin-top: 0;
             flex-direction: column;
             margin-left: 0%;
             align-items: normal;
-            height: 43%;
+/*             height: 65%; */
             
         }
         .menu__item {
             display: flex;
             margin-right: rem(14px);
+            transition: text-decoration 1s;
+            
             @include desctotablets() {
                 flex-direction: column;
                 width: 100%;
-                height: 20%;
+                /* height: 20%; */
                 text-align: center;
             }
             &:after {
@@ -205,6 +215,7 @@
 
 .close {
     position: fixed;
+
 }
 
     .close .menu__gamburger-style1 {
@@ -267,11 +278,12 @@
     font-size: rem(13px);
     font-weight: 500;
     text-transform: uppercase;
-    transition: 0.2s;
+    transition: 0.4s;
     margin-left: -17%;
     margin-top: 29%;
     &:hover {
         transform: scale(1.06);
+        background-color: rgb(255, 38, 0);
         
     }
     @include desctotablets() {
@@ -396,41 +408,59 @@
     height: rem(200px);
     z-index: 60;
     .pagination__item {
-        margin-bottom: rem(15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        margin: 0.3rem;
             .pagination__item-style {
                 width: rem(6px);
                 height: rem(6px);
-                margin-left: rem(4px);
-                margin-top: rem(4px);
                 border-radius: 50%;
                 background-color: #ffffff;  
             }
     }
 }
-.pagination__item:first-child {
-    margin-bottom: rem(11px);
+.pagination__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagination__item-link {
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    transition: border .3s;
 }
 .pagination__item-active {
-    width: rem(14px);
-    height: rem(14px);
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     border: 1px solid #ffffff;
     background-color: transparent;
-    margin-bottom: rem(11px);
-    margin-left: rem(-1px);
 }
 .promo__scroll {
     width: rem(29px);
     height: rem(14px);
-
     display: block;
     position: absolute;
     left: 0;
     bottom: 0;
     margin-left: 48.5%;
     margin-bottom: rem(41px);
+    transition: .2s;
 }
-
+.promo__scroll:hover {
+    transform: scale(1.2);
+}
+.pagination__item-link:hover {
+    border-color: #fff;
+}
 
 
 

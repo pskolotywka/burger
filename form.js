@@ -30,37 +30,111 @@ function modalopen() {
   },2000);
 }
 
+function check() {
+  if (form.querySelector('.form__checkbox').checked === false) {
+    console.log('Не перезванивать');
+  }
+  if (form.querySelector('.form__checkbox').checked === true) {
+    console.log('Перезванивать');
+  }
+}
+function checkCard() {
+  if (form.querySelector('.radioform__button-change').checked === true) {
+    console.log('Потребуется сдача');
+  }
+  if (form.querySelector('.radioform__button-card').checked === true) {
+    console.log('Оплата картой');
+  }
+}
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
+  if (validateForm(form)) {
+    
+    const name = document.querySelector('#user_name').value;
+    const phone = document.querySelector('#user_phone').value;
+    const comment = document.querySelector('#user_comment').value;
+    const radiocard = document.querySelector('.radioform__button-card').checked;
+    const radiochange = document.querySelector('.radioform__button-change').checked;
+    const radioCall = document.querySelector('.form__checkbox').checked;
+    const mail = "johnyjust69@gmail.com";
+    console.log(radioCall)
+    if (radioCall === false) {
+      var radioCallValue = 'Перезванивать';
+    }
+    if (radioCall === true) {
+      var radioCallValue = 'Не перезванивать';
+    }
+    if (radiochange === true) {
+      var radios = 'Потребуется сдача';
+    }
+    if (radiocard === true) {
+      var radios = 'Оплата картой';
+    }
+    if (radiocard === false && radiochange == false) {
+      var radios = 'Не выбрано';
+    }
 
-  const name = document.querySelector('#user_name').value;
-  const phone = document.querySelector('#user_phone').value;
-  const comment = document.querySelector('#user_comment').value;
-  const mail = "johnyjust69@gmail.com";
+    var formData = new FormData() 
+        formData.append('Имя', name);
+        formData.append('Телефон', phone);
+        formData.append('Комментарий', comment);
+        formData.append('Почта', mail);
+        formData.append('Оплата', radios);
+        formData.append('Звонок', radioCallValue);
+        console.log(formData);
+        
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+    xhr.send(formData);
+    console.log(form.querySelector('.form__checkbox').checked);
+    check();
+    checkCard();
+    xhr.addEventListener('load', e => {
+      if (xhr.status === 200) {
+        modalopen();
+        console.log(xhr.status)
+      }
+      else {
+        modalopen(); 
+        popupsFormTitle.textContent = "Ошибка";
+      }
+      setTimeout(function clr() {
+        resetBtn.click()
+      },2000);
+    })
+  }
+  
 
-  var formData = new FormData() 
-      formData.append('name', name);
-      formData.append('phone', phone);
-      formData.append('comment', comment);
-      formData.append('mail', mail);
-      console.log(formData);
-      
-  const xhr = new XMLHttpRequest();
-  xhr.responseType = 'json';
-  xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
-  xhr.send(formData);
-  xhr.addEventListener('load', e => {
-    if (xhr.readyState === 4) {
-      modalopen();
-      console.log(xhr.readyState)
+
+
+  function validateForm(form) {
+    let valid = true;
+    
+    if (!validateField(form.querySelector('#user_name'))) {
+        valid = false;
+    }
+
+    if (!validateField(form.querySelector('#user_phone'))) {
+        valid = false;
+    }
+
+    if (!validateField(form.querySelector('#user_comment'))) {
+        valid = false;
+    }
+    return valid;
+  };
+
+
+  function validateField(field) {
+    if (!field.checkValidity()){
+        field.nextElementSibling.textContent = field.validationMessage;
+        return false;
     }
     else {
-      modalopen(); 
-      popupsFormTitle.textContent = "Ошибка";
+        field.nextElementSibling.textContent = '';
+        return true;
     }
-    setTimeout(function clr() {
-      resetBtn.click()
-    },2000);
-  })
+  }
 });

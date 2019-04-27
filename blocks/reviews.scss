@@ -48,11 +48,12 @@
     transition-duration: 0.6s;
     
     @include tablets () {
-        margin-left: 22%;
         text-align: center;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        height: 100%;
+        width: 100%;
     }
     
 }
@@ -78,6 +79,10 @@
     font-weight: 400;
     margin-top: rem(18px);
     margin-left: rem(20px);
+    @include tablets() {
+        margin: 0 auto;
+        margin-bottom: 7%;
+    }
 }
 .reviews__description-text,
 .reviews__modal-text {
@@ -98,6 +103,7 @@
     @include tablets() {
         max-height: 8vh;
         overflow: hidden;
+        margin: 0 auto;
     }
 }
 #reviews__description-button {
@@ -118,12 +124,12 @@
     margin-top: rem(23px);
     margin-left: rem(20px);
     @include tablets () {
-        margin-left: 2.85rem;
+        margin: 0 auto;
     }
 }
 .reviews__item:hover .reviews__description {
     opacity: 1;
-    animation: fadeInUp .7s;
+    animation: zoomIn .4s ease;
 }
 .reviews__popup {
     display: none;
@@ -244,3 +250,5 @@
       opacity: 1;
     }
   }
+
+  

@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="promo sector">
+        <section class="promo sector" id="promo">
             <div class="container">
             <header class="header">
                     <svg class="logo">
@@ -90,7 +90,7 @@
                         <use xlink:href="./sprite.svg#hand"></use>
                     </svg>
                     <div class="about__info-block">
-                    <h3 class="about__item-title">Ручная  сборка</h3>
+                    <h3 class="about__item-title">Ручная сборка</h3>
                     <p class="about__item-description">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
                 </div>
                 </li>
@@ -113,46 +113,215 @@
                             <use xlink:href="./sprite.svg#arrow-scroll"></use>
                         </svg>
                     </button>
-                    
-                    <div class="description__content">
-                        <div class="description__composition">
-                                    <button type="submit" class="description__composition-button">
-                                        <div class="description__composition-icon">
-                                                <div class="description__composition-text">Состав</div>
+                    <div id="slider">
+                        <ul class="description__list">
+                            <li class="description__item">
+                                <div class="description__content">
+                                    <div class="description__composition">
+                                                <button type="submit" class="description__composition-button">
+                                                    <div class="description__composition-icon">
+                                                            <div class="description__composition-text">Состав</div>
+                                                    </div>
+                                                </button>
+                                                <div class="description__composition-drop">
+                                                    <ul class="description__composition-drop-list">
+                                                        <li class="description__composition-drop-item">
+                                                            <svg class="description__composition-drop-icon">
+                                                                <use xlink:href="./sprite.svg#meat"></use>
+                                                            </svg>
+                                                            <div class="description__composition-drop-name">Говядина</div>
+                                                            <div class="description__composition-drop-number">300 г</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        <img src="image/burger1.png" alt="" class="description__composition-image">
+                                        <div class="description__absolute">
+                                                <div class="description__composition-calories-block">
+                                                        <svg class="description__composition-calories-icon">
+                                                                <use xlink:href="./sprite.svg#kkal"></use>
+                                                            </svg>
+                                                    <div class="description__composition-calories-number">1200</div>
+                                                    <div class="description__composition-calories-name">Ккал</div>
+                                                </div>
                                         </div>
-                                    </button>
-                                    <div class="description__composition-drop">
-                                        <ul class="description__composition-drop-list">
-                                            <li class="description__composition-drop-item">
-                                                <svg class="description__composition-drop-icon">
-                                                    <use xlink:href="./sprite.svg#meat"></use>
-                                                </svg>
-                                                <div class="description__composition-drop-name">Говядина</div>
-                                                <div class="description__composition-drop-number">300 г</div>
-                                            </li>
-                                        </ul>
                                     </div>
-                            <img src="image/burger1.png" alt="" class="description__composition-image">
-                            <div class="description__absolute">
-                                    <div class="description__composition-calories-block">
-                                            <svg class="description__composition-calories-icon">
-                                                    <use xlink:href="./sprite.svg#kkal"></use>
-                                                </svg>
-                                        <div class="description__composition-calories-number">1200</div>
-                                        <div class="description__composition-calories-name">Ккал</div>
+                                    <div class="description__info">
+                                        <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                                        <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                        <div class="description__info-buy">
+                                            <span class="description__info-buy-price">800</span>
+                                            <span class="description__info-buy-valute">рублей</span>
+                                            <a href="#" class="description__info-buy-button">Заказать</a>
+                                        </div>
                                     </div>
                             </div>
-                        </div>
-                        <div class="description__info">
-                            <h2 class="description__info-title">Dark Beef <br> Burger</h2>
-                            <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
-                            <div class="description__info-buy">
-                                <span class="description__info-buy-price">500</span>
-                                <span class="description__info-buy-valute">рублей</span>
-                                <a href="#" class="description__info-buy-button">Заказать</a>
+                            </li>
+                            <li class="description__item">
+                                <div class="description__content">
+                                    <div class="description__composition">
+                                                <button type="submit" class="description__composition-button">
+                                                    <div class="description__composition-icon">
+                                                            <div class="description__composition-text">Состав</div>
+                                                    </div>
+                                                </button>
+                                                <div class="description__composition-drop">
+                                                    <ul class="description__composition-drop-list">
+                                                        <li class="description__composition-drop-item">
+                                                            <svg class="description__composition-drop-icon">
+                                                                <use xlink:href="./sprite.svg#meat"></use>
+                                                            </svg>
+                                                            <div class="description__composition-drop-name">Говядина</div>
+                                                            <div class="description__composition-drop-number">300 г</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        <img src="image/burger2.png" alt="" class="description__composition-image">
+                                        <div class="description__absolute">
+                                                <div class="description__composition-calories-block">
+                                                        <svg class="description__composition-calories-icon">
+                                                                <use xlink:href="./sprite.svg#kkal"></use>
+                                                            </svg>
+                                                    <div class="description__composition-calories-number">1200</div>
+                                                    <div class="description__composition-calories-name">Ккал</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="description__info">
+                                        <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                                        <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                        <div class="description__info-buy">
+                                            <span class="description__info-buy-price">500</span>
+                                            <span class="description__info-buy-valute">рублей</span>
+                                            <a href="#" class="description__info-buy-button">Заказать</a>
+                                        </div>
+                                    </div>
                             </div>
-                        </div>
-                </div>
+                            </li>
+                            <li class="description__item">
+                                <div class="description__content">
+                                    <div class="description__composition">
+                                                <button type="submit" class="description__composition-button">
+                                                    <div class="description__composition-icon">
+                                                            <div class="description__composition-text">Состав</div>
+                                                    </div>
+                                                </button>
+                                                <div class="description__composition-drop">
+                                                    <ul class="description__composition-drop-list">
+                                                        <li class="description__composition-drop-item">
+                                                            <svg class="description__composition-drop-icon">
+                                                                <use xlink:href="./sprite.svg#meat"></use>
+                                                            </svg>
+                                                            <div class="description__composition-drop-name">Говядина</div>
+                                                            <div class="description__composition-drop-number">300 г</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        <img src="image/burger3.png" alt="" class="description__composition-image">
+                                        <div class="description__absolute">
+                                                <div class="description__composition-calories-block">
+                                                        <svg class="description__composition-calories-icon">
+                                                                <use xlink:href="./sprite.svg#kkal"></use>
+                                                            </svg>
+                                                    <div class="description__composition-calories-number">1200</div>
+                                                    <div class="description__composition-calories-name">Ккал</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="description__info">
+                                        <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                                        <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                        <div class="description__info-buy">
+                                            <span class="description__info-buy-price">1200</span>
+                                            <span class="description__info-buy-valute">рублей</span>
+                                            <a href="#" class="description__info-buy-button">Заказать</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            </li>
+                            <li class="description__item">
+                                <div class="description__content">
+                                    <div class="description__composition">
+                                                <button type="submit" class="description__composition-button">
+                                                    <div class="description__composition-icon">
+                                                            <div class="description__composition-text">Состав</div>
+                                                    </div>
+                                                </button>
+                                                <div class="description__composition-drop">
+                                                    <ul class="description__composition-drop-list">
+                                                        <li class="description__composition-drop-item">
+                                                            <svg class="description__composition-drop-icon">
+                                                                <use xlink:href="./sprite.svg#meat"></use>
+                                                            </svg>
+                                                            <div class="description__composition-drop-name">Говядина</div>
+                                                            <div class="description__composition-drop-number">300 г</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        <img src="image/burger4.png" alt="" class="description__composition-image">
+                                        <div class="description__absolute">
+                                                <div class="description__composition-calories-block">
+                                                        <svg class="description__composition-calories-icon">
+                                                                <use xlink:href="./sprite.svg#kkal"></use>
+                                                            </svg>
+                                                    <div class="description__composition-calories-number">1200</div>
+                                                    <div class="description__composition-calories-name">Ккал</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="description__info">
+                                        <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                                        <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                        <div class="description__info-buy">
+                                            <span class="description__info-buy-price">930</span>
+                                            <span class="description__info-buy-valute">рублей</span>
+                                            <a href="#" class="description__info-buy-button">Заказать</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            </li>
+                            <li class="description__item">
+                                <div class="description__content">
+                                    <div class="description__composition">
+                                                <button type="submit" class="description__composition-button">
+                                                    <div class="description__composition-icon">
+                                                            <div class="description__composition-text">Состав</div>
+                                                    </div>
+                                                </button>
+                                                <div class="description__composition-drop">
+                                                    <ul class="description__composition-drop-list">
+                                                        <li class="description__composition-drop-item">
+                                                            <svg class="description__composition-drop-icon">
+                                                                <use xlink:href="./sprite.svg#meat"></use>
+                                                            </svg>
+                                                            <div class="description__composition-drop-name">Говядина</div>
+                                                            <div class="description__composition-drop-number">300 г</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                        <img src="image/burger5.png" alt="" class="description__composition-image">
+                                        <div class="description__absolute">
+                                                <div class="description__composition-calories-block">
+                                                        <svg class="description__composition-calories-icon">
+                                                                <use xlink:href="./sprite.svg#kkal"></use>
+                                                            </svg>
+                                                    <div class="description__composition-calories-number">1200</div>
+                                                    <div class="description__composition-calories-name">Ккал</div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="description__info">
+                                        <h2 class="description__info-title">Dark Beef <br> Burger</h2>
+                                        <div class="description__info-text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                                        <div class="description__info-buy">
+                                            <span class="description__info-buy-price">670</span>
+                                            <span class="description__info-buy-valute">рублей</span>
+                                            <a href="#" class="description__info-buy-button">Заказать</a>
+                                        </div>
+                                    </div>
+                            </div>
+                            </li>
+                        </ul>
+                    </div>
             <button type="button" class="description__scroll-next-link">
                 <svg class="description__scroll-next">
                     <use xlink:href="./sprite.svg#arrow-scroll"></use>
@@ -395,10 +564,12 @@
                         <label class="form__block-label">
                             <div class="form__block-name">Имя</div>
                             <input type="text" name="user_name" id="user_name" class="form__block-input" required>
+                            <div class="form__error"></div>
                         </label>
                         <label class="form__block-label">
                                 <div class="form__block-name">Телефон</div>
                                 <input type="text" name="user_phone" id="user_phone" class="form__block-input" required>
+                                <div class="form__error"></div>
                             </label>
                     </div>
                     <div class="form__row">
@@ -428,15 +599,16 @@
                         </div>
                     <div class="form__comment">
                         <div class="form__comment-name">Комментарий</div>
-                        <textarea type="text" value="comments" name="user_text" id="user_comment" class="form__comment-input"></textarea>
+                            <textarea type="text" value="comments" name="user_text" id="user_comment" class="form__comment-input" required></textarea>
+                            <div class="form__error"></div>
                             <div class="radioform__block">
                                     <label class="radioform__radio-box" tabindex="0">
-                                            <input type="radio" name="yesno" value="no" class="radioform__button">
+                                            <input type="radio" name="yesno" value="no" class="radioform__button-change">
                                             <span class="radioform__radio-name"><span class="radioform__radio-name-custom">Потребуется сдача</span></span>
                                         </label>
                 
                                         <label class="radioform__radio-box" tabindex="0">
-                                            <input type="radio" name="yesno" value="no" class="radioform__button">
+                                            <input type="radio" name="yesno" value="no" class="radioform__button-card">
                                             <span class="radioform__radio-name"><span class="radioform__radio-name-custom">Опалата картой</span></span>
                                         </label>
                             </div>
@@ -501,45 +673,47 @@
         <div class="pagination">
             <ul class="pagination__list">
                 <li class="pagination__item pagination__item-active">
-                    <div class="pagination__item-style pagination__item-style-active"></div>
+                    <a href="#promo" class="pagination__item-link">
+                        <div class="pagination__item-style"></div>
+                    </a>
                 </li>
                 <li class="pagination__item">
-                    <a href="" class="pagination__item-link">
+                    <a href="#about" class="pagination__item-link">
                         <div class="pagination__item-style"></div>
                     </a>       
                     </li>
                     <li class="pagination__item">
-                            <a href="" class="pagination__item-link">
+                            <a href="#description" class="pagination__item-link">
                                 <div class="pagination__item-style"></div>
                             </a>       
                             </li>
                             <li class="pagination__item">
-                                    <a href="" class="pagination__item-link">
+                                    <a href="#team" class="pagination__item-link">
                                         <div class="pagination__item-style"></div>
                                     </a>       
                                     </li>
                                     <li class="pagination__item">
-                                            <a href="" class="pagination__item-link">
+                                            <a href="#setmenu" class="pagination__item-link">
                                                 <div class="pagination__item-style"></div>
                                             </a>       
                                             </li>
                                             <li class="pagination__item">
-                                                    <a href="" class="pagination__item-link">
+                                                    <a href="#reviews" class="pagination__item-link">
                                                         <div class="pagination__item-style"></div>
                                                     </a>       
                                                     </li>
                                                     <li class="pagination__item">
-                                                            <a href="" class="pagination__item-link">
+                                                            <a href="#video" class="pagination__item-link">
                                                                 <div class="pagination__item-style"></div>
                                                             </a>       
                                                             </li>
                                                             <li class="pagination__item">
-                                                                    <a href="" class="pagination__item-link">
+                                                                    <a href="#form" class="pagination__item-link">
                                                                         <div class="pagination__item-style"></div>
                                                                     </a>       
                                                                     </li>
                                                                     <li class="pagination__item">
-                                                                            <a href="" class="pagination__item-link">
+                                                                            <a href="#map" class="pagination__item-link">
                                                                                 <div class="pagination__item-style"></div>
                                                                             </a>       
                                                                             </li>
@@ -547,10 +721,12 @@
         </div>
     </div>
     <script src="menu.js"></script>
+    <script src="slider.js"></script>
     <script src="modalwindow.js"></script>
     <script src="team.js"></script>
     <script src="accordeon.js"></script>
     <script src="modalrew.js"></script>
     <script src="form.js"></script>
+    <script src="pagination.js"></script>
 </body>
 </html>

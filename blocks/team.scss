@@ -26,13 +26,16 @@
         margin-left: 15%;
         @include tablets() {
             font-size: 5.1rem;
+            margin: 0 auto;
             margin-top: 28.4%;
-            margin-left: 31%;
+            margin-bottom: 8%;
         }
         @include phones() {
             font-size: 3.8rem;
-            margin-top: 30.4%;
-            margin-left: 29%;
+            margin: 0 auto;
+            width: auto;
+            margin-top: 41.4%;
+            margin-bottom: 8%;
         }
     }
 }
@@ -42,18 +45,26 @@
         flex-direction: column;
         justify-content: center;
     }
+    @include phones() {
+        
+    }
 }
 .accordeon__list {
     margin-top: rem(41px);
-    margin-left: rem(96px);
+    margin-left: 5rem;;
     @include tablets() {
         margin-top: 7.4%;
-        width: 38%;
+        width: 65%;
         margin: 0 auto;
     }
     @include phones() {
         margin-top: 6%;
-        margin-left: 29%;
+    }
+}
+.accordeon__item-name {
+    @include tablets() {
+        display: flex;
+        justify-content: center;
     }
 }
 .accordeon__item-name-button {
@@ -90,6 +101,12 @@
 
 .accordeon__item-dropdown-block-b {
     display: flex;
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .accordeon__item-name-button {
@@ -113,6 +130,9 @@
     height: 0;
     transition: .4s;
     animation: 0;
+    @include tablets() {
+        width: 100%;
+    }
     .accordeon__item-dropdown-avatar {
         width: 6rem;
         height: 6rem;

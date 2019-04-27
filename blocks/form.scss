@@ -169,7 +169,8 @@
         margin-top: 8%;
     }
 }
-.radioform__button {
+.radioform__button-change,
+.radioform__button-card {
     display: none;
 }
 .radioform__radio-name {
@@ -189,7 +190,8 @@
         margin-right: 3.625rem;
     }
 }
-.radioform__button:checked + .radioform__radio-name:before {
+.radioform__button-change:checked + .radioform__radio-name:before,
+.radioform__button-card:checked + .radioform__radio-name:before {
     content: "";
     position: absolute;
     display: block;
@@ -246,6 +248,7 @@
             width: rem(97px);
             height: rem(35px);
             background-color: #e45028;
+            box-shadow: 0 -3px rgb(161, 56, 27) inset;
             border-radius: 5px;
             display: flex;
             justify-content: center;
@@ -279,4 +282,7 @@
     @include tablets() {
         font-size: 1rem;
     }
+}
+.form_error {
+    color: red;
 }
