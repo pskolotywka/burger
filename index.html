@@ -7,10 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>Burger</title>
 </head>
 <body>
     <div class="wrapper">
+            <div class="transition-loader done" id="page-preloader">
+                    <div class="transition-loader-inner">
+                      <label></label>
+                      <label></label>
+                      <label></label>
+                      <label></label>
+                      <label></label>
+                      <label></label>
+                    </div>
+                  </div>
         <section class="promo sector" id="promo">
             <div class="container">
             <header class="header">
@@ -720,6 +731,7 @@
             </ul>
         </div>
     </div>
+    <script src="preloader.js"></script>
     <script src="menu.js"></script>
     <script src="slider.js"></script>
     <script src="modalwindow.js"></script>
@@ -728,5 +740,6 @@
     <script src="modalrew.js"></script>
     <script src="form.js"></script>
     <script src="pagination.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
 </body>
 </html>
