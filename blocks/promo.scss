@@ -95,11 +95,12 @@
     width: 73%;
     margin-top: 1.3875rem;
     margin-left: 1.2rem;
+    opacity: 1;
 
     @include desctotablets () {
         z-index: 1001;
         display: none;
-        opacity: 0;
+        opacity: 1;
         position: absolute;
         margin-top: 0px;
     }
@@ -279,12 +280,12 @@
     font-weight: 500;
     text-transform: uppercase;
     transition: 0.4s;
-    margin-left: -17%;
     margin-top: 29%;
+    box-shadow: 0 -3px #a1381b inset;
     &:hover {
         transform: scale(1.06);
         background-color: rgb(255, 38, 0);
-        
+        box-shadow: 0 -3px rgb(155, 23, 0) inset;
     }
     @include desctotablets() {
         margin-top: 0%;
@@ -437,7 +438,7 @@
     align-items: center;
     transition: border .3s;
 }
-.pagination__item-active {
+.pagination__item.active {
     width: rem(16px);
     height: rem(16px);
     border-radius: 50%;

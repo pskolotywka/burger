@@ -114,15 +114,15 @@
     background: transparent;
     cursor: pointer;
     padding: 0;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
 }
 .teamopened {
     display: block;
     opacity: 1;
 }
-.accordeon__item-name-button::before.active {
+/* .accordeon__item-name-button:before.active {
     transform: rotate(180deg);
-}
+} */
 .accordeon__item-dropdown {
     display: flex;
     width: 80%;
@@ -156,7 +156,7 @@
     line-height: rem(24.01px);
     }
 }
-.active .accordeon__item-name-button:before {
+.accordeon__item.active .accordeon__item-name-button::before {
     transform: rotate(-180deg);
 }
 

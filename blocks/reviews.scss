@@ -165,6 +165,7 @@
     padding: 20px;
     background: white;
     border-radius: 8px;
+    width: auto;
 }
 .reivews__modal-close {
     background-color: transparent;
@@ -172,7 +173,12 @@
     position: absolute;
     top: 4px;
     right: 4px;
-
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
 }
 .style-btn {
@@ -202,8 +208,6 @@
     background-color: black;
     transform: rotate(135deg);
     border-radius: 2px;
-    top: 12px;
-    left: -2px;
 }
 .style-btn:before {
     content: "";

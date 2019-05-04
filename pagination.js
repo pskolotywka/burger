@@ -1,4 +1,4 @@
-const paginationBtn = document.querySelectorAll('.pagination__item');
+/* const paginationBtn = document.querySelectorAll('.pagination__item');
 const hrefsave = document.querySelectorAll('.pagination__item-link');
 
 for (const item of paginationBtn) {
@@ -11,3 +11,4 @@ for (const item of paginationBtn) {
         }
     })
 }
+ */
