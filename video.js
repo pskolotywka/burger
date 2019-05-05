@@ -137,15 +137,13 @@ const dragger = document.querySelector('.video__volume-playback-dot');
 dragger.onmousedown = function(e) {
     dragger.style.zIndex = 100;
     function moveAt(e) {
-
-        dragger.style.left = e.pageX - 770 + 'px';
-        let positionDot = dragger.style.left;
-
-        let lvlVol = (100 / 58) * positionDot;
-
-        player.setVolume(lvlVol);
-        console.log(player.getVolume(lvlVol))
-        console.log(positionDot);
+        const barr = (e.currentTarget);
+        var barLeft = barr.getBoundingClientRect();
+        var barVolumes = e.pageX - barLeft.left; 
+        var clickVolumesPos = (100 / 58) * barVolumes;
+        dragger.style.left = e.pageX - barLeft.left + 'px';
+        const draggerLeft = dragger.style.left;
+        player.setVolume(clickVolumesPos);
     };
     const background = document.querySelector('.video__volume-playback');
 
@@ -157,7 +155,6 @@ dragger.onmousedown = function(e) {
         dragger.onmouseup = null;
     };
     dragger.ondragstart = function() {
-
         return false;
     };
     
@@ -166,67 +163,19 @@ dragger.onmousedown = function(e) {
 
 
 
-
-
-
-/* $('.video__volume-playback').on('click', e => {
+$('.video__volume-playback').on('click', e => {
 
     const barVol = $(e.currentTarget);
     const barVolPos = e.originalEvent.layerX; 
 
-    let clickVolumeLvl = (100 / 58) * barVolPos;
+    const newButtonPosition = e.pageX - barVol.offset().left;
+
+    let clickVolumeLvl = (100 / 58) * newButtonPosition;
 
     $('.video__volume-playback-dot').css({
         left: `${barVolPos}px`
     })
 
     player.setVolume(clickVolumeLvl);
-
+    console.log(newButtonPosition)
   });
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- /*     const sliderElem = document.querySelector('.video__volume-playback');
-    const thumbElem = sliderElem.children[0];
-
-    thumbElem.onmousedown = function(e) {
-        var thumbCoords = getComputedStyle(thumbElem);
-        var shiftX = e.pageX;
-        console.log(shiftX);
-
-
-
-        var sliderCoords = getComputedStyle(sliderElem);
-
-        document.onmousemove = function(e) {
-            const newLeft = e.pageX - shiftX - sliderCoords.left;
-        }
-        console.log(newLeft)
-    }
-       */
