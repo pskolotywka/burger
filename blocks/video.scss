@@ -149,16 +149,17 @@
         width: 58px;
         height: 4px;
         background-color: #626262;
-        position: relative;
+        
         &-dot {
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            position: absolute;
+            position: relative;
             background-color: #626262;
             top: -4px;
             right: 0;
-            margin-left: -6px;
+            left: 58px;
+
         }
     }
 }

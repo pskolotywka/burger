@@ -115,67 +115,115 @@ function formatTime(time) {                                 // создаём ф
 
 $('.video__volume-btn').on('click', e => {
     const volume = $('.video__volume-btn');
+    var volPos = player.getVolume()
+    const volPosDot = (58 / 100) * volPos;
+
+
+    const dotka = document.querySelector('.video__volume-playback-dot');
+    const dotkaPos = getComputedStyle(dotka); 
+    const dotPosition = dotkaPos.left;
 
     if (player.isMuted()) {
         player.unMute();
         $('.video__volume').addClass('active');
+        dotka.style.left = volPosDot - 6 + 'px';
+        console.log(dotka.style.left)
     }
     else {
         player.mute();
-        /* $('.video__volume-playback-dot').css({
+        $('.video__volume-playback-dot').css({
             left: `0px`
-        }) */
+        })
         $('.video__volume').removeClass('active');
+        
     }
     
 });
 
+var sliderElem = document.querySelector('.video__volume-playback');
+var thumbElem = document.querySelector('.video__volume-playback-dot');
 
-
-const dragger = document.querySelector('.video__volume-playback-dot');
-
-dragger.onmousedown = function(e) {
-    dragger.style.zIndex = 100;
-    function moveAt(e) {
-        const barr = (e.currentTarget);
-        var barLeft = barr.getBoundingClientRect();
-        var barVolumes = e.pageX - barLeft.left; 
-        var clickVolumesPos = (100 / 58) * barVolumes;
-        dragger.style.left = e.pageX - barLeft.left + 'px';
-        const draggerLeft = dragger.style.left;
-        player.setVolume(clickVolumesPos);
+thumbElem.onmousedown = function(e) {
+    var thumbCoords = getCoords(thumbElem);
+    var shiftX = e.pageX - thumbCoords.left;
+    var sliderCoords = getCoords(sliderElem);
+    document.onmousemove = function (e) {
+        var newLeft = e.pageX - shiftX - sliderCoords.left;
+        if (newLeft < 0) {
+            newLeft = 0;
+        };
+        var rightEdge = sliderElem.offsetWidth - thumbElem.offsetWidth;
+        if (newLeft > rightEdge) {
+            newLeft = rightEdge;
+        };
+        thumbElem.style.left = newLeft + 'px';
+        var isLeft = sliderElem.getBoundingClientRect().width;
+        var volumePos = (100 / isLeft) * newLeft;
+        player.setVolume(volumePos);  
     };
-    const background = document.querySelector('.video__volume-playback');
-
-    background.onmousemove = function(e) {
-        moveAt(e);
+    document.onmouseup = function (e) {
+        document.onmousemove = document.onmouseup = null;
     };
-    dragger.onmouseup = function() {
-        background.onmousemove = null;
-        dragger.onmouseup = null;
-    };
-    dragger.ondragstart = function() {
+    thumbElem.ondragstart = function() {
         return false;
-    };
-    
-};
-    
-
-
+    }
+    function getCoords(elem) {
+        var box = elem.getBoundingClientRect();
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
+}
 
 $('.video__volume-playback').on('click', e => {
-
     const barVol = $(e.currentTarget);
-    const barVolPos = e.originalEvent.layerX; 
-
-    const newButtonPosition = e.pageX - barVol.offset().left;
-
-    let clickVolumeLvl = (100 / 58) * newButtonPosition;
-
-    $('.video__volume-playback-dot').css({
-        left: `${barVolPos}px`
-    })
-
-    player.setVolume(clickVolumeLvl);
+    const newButtonPosition = e.pageX - barVol.offset().left -6;
     console.log(newButtonPosition)
+    let clickVolumeLvl = (100 / 46) * newButtonPosition;
+    $('.video__volume-playback-dot').css({
+        left: `${newButtonPosition}px`
+    })
+    player.setVolume(clickVolumeLvl);
+
   });
+
+
+var sliderElemT = document.querySelector('.video__playback');
+var thumbElemT = document.querySelector('.video__playback-dot');
+
+thumbElemT.onmousedown = function(e) {
+    var thumbCoords = getCoords(thumbElemT);
+    var shiftX = e.pageX - thumbCoords.left;
+    var sliderCoords = getCoords(sliderElemT);
+    document.onmousemove = function (e) {
+        var newLeft = e.pageX - shiftX - sliderCoords.left;
+        if (newLeft < 0) {
+            newLeft = 0;
+        };
+        var rightEdge = sliderElemT.offsetWidth - thumbElemT.offsetWidth;
+        if (newLeft > rightEdge) {
+            newLeft = rightEdge;
+        };
+        thumbElemT.style.left = newLeft + 'px';
+
+        var isLeftVideo = sliderElemT.getBoundingClientRect().width;
+        var durationVideo = player.getDuration();
+        var videoPos = (isLeftVideo / durationVideo) * newLeft;
+
+        player.seekTo(videoPos);
+    };
+    document.onmouseup = function (e) {
+        document.onmousemove = document.onmouseup = null;
+    };
+    thumbElemT.ondragstart = function() {
+        return false;
+    }
+    function getCoords(elem) {
+        var box = elem.getBoundingClientRect();
+        return {
+            top: box.top + pageYOffset,
+            left: box.left + pageXOffset
+        };
+    }
+}
