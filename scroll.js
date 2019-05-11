@@ -4,6 +4,10 @@ const monitor = $('.main-content');
 
 let inScroll = false;
 
+const md = new MobileDetect(window.navigator.userAgent);
+const isMobile = md.mobile();
+
+
 const switchDot = menuItemIndex => {
     $('.pagination__item')
         .eq(menuItemIndex)
@@ -75,9 +79,11 @@ $('[data-scroll-to]').on('click', e => {
     onScroll(target);
 })
 
-$(window).swipe( {
-    swipe:function(event, direction) {
-      const nextOrPrev = direction == 'up' ? 'next' : 'prev';
-      scrollToSection(nextOrPrev);
-    }
-});
+if (isMobile) {
+    $(window).swipe( {
+        swipe:function(event, direction) {
+          const nextOrPrev = direction == 'up' ? 'next' : 'prev';
+          scrollToSection(nextOrPrev);
+        }
+    });
+}

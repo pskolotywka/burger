@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -76,7 +77,7 @@
                             <h1 class="promo__info-description">натуральные <br> бургеры</h1>
                         </div>
                 </div>
-                <a href="#" class="promo__scroll-link">
+                <a href="#about" class="promo__scroll-link" data-scroll-to="1">
                     <svg class="promo__scroll">
                         <use xlink:href="./sprite.svg#arrow-scroll"></use>
                     </svg>
@@ -564,18 +565,14 @@
                             <button class="video__play"></button>
                             <div class="video__paused"></div>
                     </div>
-                    <div class="video__playback">
-                        <div class="video__playback-dot"></div>
-                    </div>
+                    <input type="range" class="player__runner" name="video-playback" min="0" max="100" value="0" step="0.001">
                     <div class="video__time">
                         <div class="video__time-duration">0:00</div>
                         <div class="video__time-playing">0:00</div>
                     </div>
                     <div class="video__volume active">
                         <button class="video__volume-btn"></button>
-                        <div id="slidervol" class="video__volume-playback" >
-                            <div class="video__volume-playback-dot"></div>
-                        </div>
+                        <input type="range" class="video__volume-run" name="volume" min="0" max="100" value="100" step="1">
                     </div>
                 </div>
             </div>
@@ -638,10 +635,11 @@
                                             <span class="radioform__radio-name"><span class="radioform__radio-name-custom">Опалата картой</span></span>
                                         </label>
                             </div>
-                            <div class="form__checkbox-form">
-                                <input type="checkbox" class="form__checkbox">
+                            <label for="no-call" class="form__checkbox-form">
+                                <input type="checkbox" name="no-call" id="no-call" class="form__checkbox" checked>
+                                <span class="checkbox__custom"></span>
                                 <div class="form__checkbox-name">Не перезванивать</div>
-                            </div>
+                            </label>
                             <div class="form__block-buttons">
                                 <button type="submit" class="form__buttons-send">Заказать</button>
                                 <button type="reset" value="comments" href="" class="form__block-buttons-reset">Очистить</button>
@@ -652,6 +650,7 @@
             </div>
         </section>
         <section class="map sector" id="map">
+            <div id="map-content" class="map__content"></div>
             <footer class="footer">
                 <div class="container flexboxsb">
                 <div class="footer__block-contacts">
@@ -765,6 +764,8 @@
     <script src="jquery-3.4.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="preloader.js"></script>
     <script src="menu.js"></script>
@@ -775,6 +776,7 @@
     <script src="modalrew.js"></script>
     <script src="video.js"></script>
     <script src="form.js"></script>
+    <script src="map.js"></script>
     <script src="pagination.js"></script>
     <script src="scroll.js"></script>
 </body>

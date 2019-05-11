@@ -61,6 +61,7 @@ for (const item of myBtn) {
 }
 
 window.onresize = () => {
+    
     if (window.innerWidth < 768) {
         const eBtn = document.querySelectorAll('.setmenu__item-button')
         const contentel = document.querySelectorAll('.setmenu__item-dropdown');
@@ -75,7 +76,7 @@ window.onresize = () => {
             eBtn[i].style.color = 'white';
         }
     btn.classList.remove('active');
-    contente.style.width = '0px';
+/*     contente.style.width = '0px'; */
     item.style.width = '70px';
     btn.style.color = 'white';
     }
@@ -92,7 +93,6 @@ window.onresize = () => {
             eBtn[i].style.color = 'white';
         }
     btn.classList.remove('active');
-    contente.style.width = '0px';
     item.style.width = '100px';
     btn.style.color = 'white';
     }

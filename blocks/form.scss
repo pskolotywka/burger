@@ -288,3 +288,32 @@
 .form_error {
     color: red;
 }
+
+
+
+.form__checkbox {
+   display: none;
+}
+
+.checkbox__custom {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    position: relative;
+}
+.checkbox__custom:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 4px;
+    width:4px;
+    height: 9px;
+    border: solid rgb(255, 81, 0);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+
+}
+.form__checkbox:checked + .checkbox__custom::after {
+    display: block;
+}

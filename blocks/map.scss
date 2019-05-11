@@ -1,6 +1,22 @@
 .map {
-    background: center / cover no-repeat url('image/bg-map.png');
     position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.map__content {
+    height: 100%;
+    width: 100%;
+}
+
+/* .map__hint {
+    background: url('map-marker.svg');
+} */
+
+.map__hint {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-family: "ubuntulight", sans-serif;
+    font-weight: 300;
 }
 .footer {
     width: 100%;
@@ -10,10 +26,11 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 3000;
     @include tablets() {
         height: 7.1vh;
     }
@@ -21,6 +38,16 @@
         height: 14.5vh;
     }
 }
+
+
+
+
+
+
+
+
+
+
 .footer__block-contacts {
     width: rem(275px);
     height: rem(40px);
@@ -133,3 +160,4 @@
     margin-top: rem(2px);
 
 }
+

@@ -8,8 +8,8 @@
         font-family: "gagalinregular";
         font-size: rem(61px);
         font-weight: 400;
-        margin-top: 10.6vh;
         text-align: center;
+        margin-bottom: 5%;
 
     }
 }
@@ -64,6 +64,10 @@
     bottom: 0;
     left: 0;
 
+}
+.video__start-block {
+    margin-right: 1%;
+    height: 24px;
 }
 .video__play {
     width: 16px;
@@ -127,6 +131,8 @@
     font-family: 'ubuntulight', sans-serif;
     font-weight: 300;
     color:  #626262;
+    margin-right: 1%;
+    margin-left: 1%;
     &-duration {
         margin-right: 3px;
     }
@@ -138,12 +144,12 @@
     &-btn {
         border: none;
         background-color: transparent;
-        width: 18px;
+        width: 23px;
         height: 22px;
         background-image: url('image/volume.png');
         background-repeat: no-repeat;
         padding: 0;
-        margin-right: 9px;
+        margin-right: 6%;
     }
     &-playback {
         width: 58px;
@@ -183,24 +189,83 @@
 
 
 
-/* .video__paused {
-    display: none;
-    width: 5px;
-    height: 22px;
-    background-color: #626262;
-    position: relative;
-    border-radius: 3px;
-    &:before {
-        content: '';
-        
+// Стилизация ползунков 
 
-
-    }
-} */
-/* .video__play.active {
-    display: none;
+input[type=range] {
+    -webkit-appearance: none; /* Скрывает слайдер, чтобы можно было создать свой */
+    width: 100%; /* Указание параметра ширины требуется для Firefox. */
+    background-color: transparent;
+  }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
 }
- */
-/* .video__play.active + .video__paused {
-    display: block;
-} */
+input[type=range]:focus {
+    outline: none; /* Убирает голубую границу у элемента. Хотя, возможно, и стоит создавать некоторое оформления для состояния фокуса в целях обеспечения доступности. */
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; /* Скрывает слайдер, чтобы можно было добавить собственные стили. */
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-webkit-slider-thumb {        /* Стилизация непосредственно самого ползунка */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #626262;
+    top: -4px;
+    right: 0;
+  }
+                                                            /* Тоже самое для Firefox */
+input[type=range]::-moz-range-thumb {              
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #626262;
+    top: -4px;
+    right: 0;
+  }
+                                                            /* Тоже самое для IE */
+input[type=range]::-ms-thumb {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #626262;
+    top: -4px;
+    right: 0;
+  }
+
+input[type=range]::-webkit-slider-runnable-track {          /* Стилизация полосы диапазона */
+    width: 445px;
+    height: 4px;
+    background-color: #626262;
+    border-radius: 3px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background-color: #626262;
+  }
+                                                          /* Стилизация полосы диапазона для Firefox*/
+  input[type=range]::-moz-range-track {
+    width: 445px;
+    height: 4px;
+    background: transparent;
+    border-color: transparent;
+    border-radius: 3px;
+  }
+                                                            /* Стилизация полосы диапазона для IE*/
+  input[type=range]::-ms-track {
+    width: 445px;
+    height: 4px;
+    background-color: #626262;
+    border-radius: 3px;
+  }
+  input[type=range]::-ms-fill-lower {
+    background-color: #626262;
+  }
+  input[type=range]::-ms-fill-upper {
+    background-color: #626262;
+  }

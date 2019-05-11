@@ -27,14 +27,14 @@ $('.video__splash-button').on('click', e => {
 
 
 
-$('.video__playback').on('click', e => {
+/* $('.video__playback').on('click', e => {
     const bar = $(e.currentTarget);
-    const barPosition = e.originalEvent.layerX;                             // узнаем позицию при клике по плэйбэку
+    const barPosition = e.target.value;                             // узнаем позицию при клике по плэйбэку
     const clickedPercent = (barPosition / bar.width()) * 100;               // высчитываем процент позиции на которую нужно передвинуть ползунок
     const videoPosition = (player.getDuration() / 100) * clickedPercent;    // высчитываем время на которое нужно перемотать видео
 
     player.seekTo(videoPosition);
-})
+}) */
 
 
 function timerDisplay() {
@@ -44,7 +44,6 @@ function timerDisplay() {
 
 
 function onPlayerReady(event) {
-
     let interval;                                                              // создаём переменную (меняющеюся)
     const durationTime = player.getDuration();                                 // берём в переменную всю длительность видео
     clearInterval(interval);                                                    // каждый раз очищаем интервал перед его запуском
@@ -52,14 +51,11 @@ function onPlayerReady(event) {
     interval = setInterval(() => {                                                // создали интервал в 1 секунду обновления
     const completedTime = player.getCurrentTime();                                 // берём в переменную пройденное время видео
     const percent = (completedTime / durationTime) * 100;                           // делим пройдённое время на общую длительность и умножаем на 100, получаем 
-
-    $('.video__playback-dot').css({
-        left: `${percent}%`                                                         // вставляем полученный процент шага, ставим проценты
-    })
-    
+    $('.player__runner').val(percent)                         // Значение расчета позиции вставляем в value инпута ренж
     timerDisplay();  
     }, 1000);
 }
+
 
 
 function onPlayerStateChange(event) {
@@ -111,119 +107,34 @@ function formatTime(time) {                                 // создаём ф
 }
 
 
+$(".player__runner").on("change", e => {
+  const clickedPercents = e.target.value;
+  const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
 
+  player.seekTo(newPlayerTime);
+});
+
+
+$('.video__volume-run').on('change', e => {
+  const percents = e.target.value;
+
+  player.setVolume(percents);
+});
 
 $('.video__volume-btn').on('click', e => {
-    const volume = $('.video__volume-btn');
-    var volPos = player.getVolume()
-    const volPosDot = (58 / 100) * volPos;
-
-
-    const dotka = document.querySelector('.video__volume-playback-dot');
-    const dotkaPos = getComputedStyle(dotka); 
-    const dotPosition = dotkaPos.left;
+    const volPositionRun = $('.video__volume-run').value;
+    var volumeLvl = player.getVolume();
 
     if (player.isMuted()) {
         player.unMute();
         $('.video__volume').addClass('active');
-        dotka.style.left = volPosDot - 6 + 'px';
-        console.log(dotka.style.left)
+        $('.video__volume-run').val(volumeLvl)
     }
     else {
         player.mute();
-        $('.video__volume-playback-dot').css({
-            left: `0px`
-        })
         $('.video__volume').removeClass('active');
-        
+        $('.video__volume-run').val('0')
     }
-    
+
 });
 
-var sliderElem = document.querySelector('.video__volume-playback');
-var thumbElem = document.querySelector('.video__volume-playback-dot');
-
-thumbElem.onmousedown = function(e) {
-    var thumbCoords = getCoords(thumbElem);
-    var shiftX = e.pageX - thumbCoords.left;
-    var sliderCoords = getCoords(sliderElem);
-    document.onmousemove = function (e) {
-        var newLeft = e.pageX - shiftX - sliderCoords.left;
-        if (newLeft < 0) {
-            newLeft = 0;
-        };
-        var rightEdge = sliderElem.offsetWidth - thumbElem.offsetWidth;
-        if (newLeft > rightEdge) {
-            newLeft = rightEdge;
-        };
-        thumbElem.style.left = newLeft + 'px';
-        var isLeft = sliderElem.getBoundingClientRect().width;
-        var volumePos = (100 / isLeft) * newLeft;
-        player.setVolume(volumePos);  
-    };
-    document.onmouseup = function (e) {
-        document.onmousemove = document.onmouseup = null;
-    };
-    thumbElem.ondragstart = function() {
-        return false;
-    }
-    function getCoords(elem) {
-        var box = elem.getBoundingClientRect();
-        return {
-            top: box.top + pageYOffset,
-            left: box.left + pageXOffset
-        };
-    }
-}
-
-$('.video__volume-playback').on('click', e => {
-    const barVol = $(e.currentTarget);
-    const newButtonPosition = e.pageX - barVol.offset().left -6;
-    console.log(newButtonPosition)
-    let clickVolumeLvl = (100 / 46) * newButtonPosition;
-    $('.video__volume-playback-dot').css({
-        left: `${newButtonPosition}px`
-    })
-    player.setVolume(clickVolumeLvl);
-
-  });
-
-
-var sliderElemT = document.querySelector('.video__playback');
-var thumbElemT = document.querySelector('.video__playback-dot');
-
-thumbElemT.onmousedown = function(e) {
-    var thumbCoords = getCoords(thumbElemT);
-    var shiftX = e.pageX - thumbCoords.left;
-    var sliderCoords = getCoords(sliderElemT);
-    document.onmousemove = function (e) {
-        var newLeft = e.pageX - shiftX - sliderCoords.left;
-        if (newLeft < 0) {
-            newLeft = 0;
-        };
-        var rightEdge = sliderElemT.offsetWidth - thumbElemT.offsetWidth;
-        if (newLeft > rightEdge) {
-            newLeft = rightEdge;
-        };
-        thumbElemT.style.left = newLeft + 'px';
-
-        var isLeftVideo = sliderElemT.getBoundingClientRect().width;
-        var durationVideo = player.getDuration();
-        var videoPos = (isLeftVideo / durationVideo) * newLeft;
-
-        player.seekTo(videoPos);
-    };
-    document.onmouseup = function (e) {
-        document.onmousemove = document.onmouseup = null;
-    };
-    thumbElemT.ondragstart = function() {
-        return false;
-    }
-    function getCoords(elem) {
-        var box = elem.getBoundingClientRect();
-        return {
-            top: box.top + pageYOffset,
-            left: box.left + pageXOffset
-        };
-    }
-}

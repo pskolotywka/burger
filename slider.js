@@ -15,8 +15,10 @@ window.onresize = () => {
     step = parseInt(getComputedStyle(lisha).width);
     maxRight = step * 4;
     currentRight = 0;
-    item.style.right = `${currentRight}px`;
+    item.style.right = '0px';
+    console.log('123')
 }
+
 
 rightBtn.addEventListener('click', e => {
         if (currentRight < maxRight) {
@@ -39,84 +41,3 @@ leftBtn.addEventListener('click', e => {
         }
         item.style.right = `${currentRight}px`
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-rightBtn.addEventListener('click', e => {
-    if(window.innerWidth >= 1076 ){
-        if (currentRight <= 3852) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight += step;
-            item.style.right = `${currentRight}px`
-        }
-    }
-    if(window.innerWidth <= 769){
-        if (currentRight <= maxRightDesc) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight += stepDesc;
-            item.style.right = `${currentRight}px`
-        }
-    }
-    if(window.innerWidth <= 768){
-        if (currentRight <= maxRightTablets) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight += stepTablets;
-            item.style.right = `${currentRight}px`
-        }
-    }
-     
-})
-leftBtn.addEventListener('click', e => {
-    if(window.innerWidth >= 1076 ){
-        if (currentRight > minRightDesc) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight -= step;
-            item.style.right = `${currentRight}px`
-        }
-    }
-    if(window.innerWidth <= 769) {
-        if (currentRight > 0) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight -= stepDesc;
-            item.style.right = `${currentRight}px`
-        }
-    }
-    if(window.innerWidth <= 768) {
-        if (currentRight > 0) {
-            item.style.animation = 'fadeOut .2s'
-            setTimeout(function clert() {
-                item.style.animation = 'fadeIn .2s'
-            },200)
-            currentRight -= stepTablets;
-            item.style.right = `${currentRight}px`
-        }
-    }
-}) */
