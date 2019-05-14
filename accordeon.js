@@ -61,7 +61,6 @@ for (const item of myBtn) {
 }
 
 window.onresize = () => {
-    
     if (window.innerWidth < 768) {
         const eBtn = document.querySelectorAll('.setmenu__item-button')
         const contentel = document.querySelectorAll('.setmenu__item-dropdown');

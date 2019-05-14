@@ -11,13 +11,15 @@ const itemsCount = item.children.length;
 var maxRight = step * (itemsCount - 1);
 
 
-window.onresize = () => {
+window.addEventListener('resize', function () {
     step = parseInt(getComputedStyle(lisha).width);
     maxRight = step * 4;
     currentRight = 0;
     item.style.right = '0px';
-    console.log('123')
-}
+    console.log('45')
+})
+    
+
 
 
 rightBtn.addEventListener('click', e => {
@@ -33,8 +35,7 @@ rightBtn.addEventListener('click', e => {
 })
 leftBtn.addEventListener('click', e => {
         if (currentRight > minRight) {
-            currentRight -= step;
-            
+            currentRight -= step; 
         }
         else {
             currentRight = maxRight;
