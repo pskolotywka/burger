@@ -77,17 +77,17 @@ form.addEventListener('submit', function(e) {
     }
 
     var formData = new FormData() 
-        formData.append('Имя', name);
-        formData.append('Телефон', phone);
-        formData.append('Комментарий', comment);
-        formData.append('Почта', mail);
-        formData.append('Оплата', radios);
-        formData.append('Звонок', radioCallValue);
+        formData.append('name', name);
+        formData.append('phone', phone);
+        formData.append('comment', comment);
+        formData.append('to', mail);
+/*         formData.append('Оплата', radios);
+        formData.append('Звонок', radioCallValue); */
         console.log(formData);
         
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
     console.log(form.querySelector('.form__checkbox').checked);
     check();
