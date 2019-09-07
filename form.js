@@ -76,7 +76,7 @@ form.addEventListener('submit', function(e) {
       var radios = 'Не выбрано';
     }
 
-    var formData = new FormData(form) 
+    var formData = new FormData() 
         formData.append('Имя', name);
         formData.append('Телефон', phone);
         formData.append('Комментарий', comment);
