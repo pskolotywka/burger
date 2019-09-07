@@ -61,16 +61,16 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
     const btn = $('.video__play');
     const btnSplash = $('.video__splash-button');
-    switch(event.data) {                              // задаём определённые части кода на определённый состояния работы плэйера
-        case 1:                         // при 1 (воспроизведение) добавляется кнопка паузы
+    switch(event.data) {                                                      // задаём определённые части кода на определённый состояния работы плэйера
+        case 1:                                                              // при 1 (воспроизведение) добавляется кнопка паузы
         btn.addClass('pause');                                                   // пауза
-        $('.video__splash').css({                           // убирается плавно окно сплэша
+        $('.video__splash').css({                                              // убирается плавно окно сплэша
             opacity:0,
         })
-        btnSplash.css({                                         // плавно убирается кнопка сплэша
+        btnSplash.css({                                                         // плавно убирается кнопка сплэша
             opacity: 0,
         })
-        setTimeout(() => {                                          // через время анимации ставит дисплей нон кнопке и окну сплэша
+        setTimeout(() => {                                                     // через время анимации ставит дисплей нон кнопке и окну сплэша
             btnSplash.css({
                 display: 'none'
             })
@@ -85,29 +85,25 @@ function onPlayerStateChange(event) {
     }
 }
 
-
 $('.video__play').on('click', e => {
-    const playerState = player.getPlayerState(); // (Проверка статуса воспроизведения) -1 – воспроизведение видео не началось 0 – воспроизведение видео завершено 1 – воспроизведение 2 – пауза 3 – буферизация 5 – видео находится в очереди
-    if(playerState !== 1) {                          // если не воспроизводиться, тогда воспроизводим и меняем кнопку с помощью класса pause
+    const playerState = player.getPlayerState();                                     // (Проверка статуса воспроизведения) -1 – воспроизведение видео не началось 0 – воспроизведение видео завершено 1 – воспроизведение 2 – пауза 3 – буферизация 5 – видео находится в очереди
+    if(playerState !== 1) {                                                          // если не воспроизводиться, тогда воспроизводим и меняем кнопку с помощью класса pause
         player.playVideo()
     } 
     else {
-        player.pauseVideo();                  // или же останавливаем и меняе снова кнопку на плэй
+        player.pauseVideo();                                                             // или же останавливаем и меняе снова кнопку на плэй
     }
 });
 
-
-
-function formatTime(time) {                                 // создаём функцию для отслеживания времени
-    const roundTime = Math.round(time);                     // с помощью math.round округляем значение общего времени
-    const minutes = Math.floor(roundTime / 60);             // округляем минуты, деля общее время на 60
+function formatTime(time) {                                                               // создаём функцию для отслеживания времени
+    const roundTime = Math.round(time);                                                       // с помощью math.round округляем значение общего времени
+    const minutes = Math.floor(roundTime / 60);                                           // округляем минуты, деля общее время на 60
     const seconds = roundTime - minutes * 60; 
     const formattedSeconds = seconds < 10 ? `0${seconds}` : seconds;
-    return `${minutes}:${formattedSeconds}`;   // делаем сам вид текста (вроде)
-}
+    return `${minutes}:${formattedSeconds}`;                                                        // делаем сам вид текста (вроде)
+};
 
-
-$(".player__runner").on("change", e => {
+$(".player__runner").on("input", e => {
   const clickedPercents = e.target.value;
   const newPlayerTime = (player.getDuration() / 100) * clickedPercents;
 
@@ -115,7 +111,7 @@ $(".player__runner").on("change", e => {
 });
 
 
-$('.video__volume-run').on('change', e => {
+$('.video__volume-run').on('input', e => {
   const percents = e.target.value;
 
   player.setVolume(percents);

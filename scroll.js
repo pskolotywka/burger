@@ -22,6 +22,7 @@ const position = (sectionEq * "-100") + "%";  // Здесь происходит
     if (inScroll) return;
 
         inScroll = true;
+        
         seactions
         .eq(sectionEq)
         .addClass('active')

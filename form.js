@@ -8,7 +8,8 @@ const resetBtn = document.querySelector('.form__block-buttons-reset');
 const popupsForm = document.querySelector('.reviews__popup');
 const popupsFormTitle = document.querySelector('.reviews__modal-title');
 const popupsFormText = document.querySelector('.reviews__modal-text');
-const popupsFormStyle = document.querySelector('.reviews__modal-container')
+const popupsFormStyle = document.querySelector('.reviews__modal-container');
+
 function modalopen() {
   popupsForm.classList.add('modalshow');
   popupsFormTitle.textContent = "Запрос отправлен";
@@ -86,7 +87,7 @@ form.addEventListener('submit', function(e) {
         
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail/fail');
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData);
     console.log(form.querySelector('.form__checkbox').checked);
     check();
